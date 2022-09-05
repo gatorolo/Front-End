@@ -1,10 +1,14 @@
-img {
-    height: 30vh;
-};
 
-h1 {
-    font-size: 20px;
+p {
+    font-size: 21px;
 };
 .container {
   box-sizing: border-box;
+  margin-top: 10px;
+  width: 90%;
  }
+
+ img {
+    height: 60vh;
+ }
+ 
