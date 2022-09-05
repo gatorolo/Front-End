@@ -1,0 +1,9 @@
+ul {
+  display: flex;
+  position: sticky;
+}
+ul li  {
+   list-style: none;
+   margin-left: 30px;
+   text-decoration: none;
+}
