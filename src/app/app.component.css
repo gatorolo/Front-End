@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 ul {
   display: flex;
   position: sticky;

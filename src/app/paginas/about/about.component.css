@@ -1,7 +1,8 @@
+.container {
+    box-sizing: border-box;
+}
+
 img {
     height: 50vh;
 };
 
-body {
-    top: 50px;
-}
