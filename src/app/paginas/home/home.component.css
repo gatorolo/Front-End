@@ -5,8 +5,10 @@
 
 h1 {
     font-size: 20px;
+    display: inline-block;
 }
 
 img {
    height: 52vh;
 }
+
