@@ -1,11 +1,18 @@
 
-.container {
-  box-sizing: border-box;
-  margin-top: 10px;
-  width: 90%;
- }
+.container  {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      width: 90%;
+  }
+ 
+ 
 
  img {
     height: 60vh;
+    
+    text-align: center;
+    object-fit: cover;
  }
  

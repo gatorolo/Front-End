@@ -1,10 +1,19 @@
-<div class="container">
-<ul class="lista">
-    <li lista-item><a routerLink='/paginas/home'>Home</a></li>
-    <li lista-item><a routerLink='/paginas/about'>about</a></li>
-    <li lista-item><a routerLink='/paginas/skills'>Skills</a></li>
-  </ul>
-</div>
 
+<header>
+  <div class="container">
+    <ul class="list-group">
+       <li lista-item><a routerLink='/paginas/home'><fa-icon [icon]="faHome"></fa-icon></a></li>
+       <li lista-item><a routerLink='/paginas/about'><fa-icon [icon]="faAddressCard"></fa-icon></a></li>
+       <li lista-item><a routerLink='/paginas/skills'><fa-icon [icon]="faHeadSideVirus"></fa-icon></a></li>
+       
+       <div class="container social">
+         <a href="#"><fa-icon [icon]="faFacebook"></fa-icon></a>
+         <a href="#"><fa-icon [icon]="faInstagram"></fa-icon></a>
+         <a href="#"><fa-icon [icon]="faGithub"></fa-icon></a>
+       </div>
+      </ul>
+  
+  </div>
+</header>
 
 <router-outlet></router-outlet>

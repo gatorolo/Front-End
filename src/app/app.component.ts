@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import {faFacebook} from '@fortawesome/free-brands-svg-icons';
+import {faInstagram} from '@fortawesome/free-brands-svg-icons';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faHome} from '@fortawesome/free-solid-svg-icons';
+import {faAddressCard} from '@fortawesome/free-solid-svg-icons';
+import {faHeadSideVirus} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +13,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'porfolio';
+  faFacebook = faFacebook;
+  faInstagram = faInstagram;
+  faGithub = faGithub;
+  faHome = faHome;
+  faHeadSideVirus = faHeadSideVirus;
+  faAddressCard = faAddressCard
+  
 }

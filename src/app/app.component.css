@@ -1,13 +1,5 @@
 body {
     box-sizing: border-box;
-}
+    }
 
-ul {
-  display: flex;
-  position: static;
-}
-ul li  {
-   list-style: none;
-   margin-left: 30px;
-   text-decoration: none;
-}
+

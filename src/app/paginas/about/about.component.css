@@ -1,12 +1,22 @@
 .container {
     box-sizing: border-box;
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1 2 ;
+}
+
+.row-1 {
+   width: 20%;
+}
+.row-2 {
+    width: 130%;
 }
 
 h1 {
     font-size: 21px;
 }
 img {
-    height: 50vh;
+    height: 30vh;
 };
 
