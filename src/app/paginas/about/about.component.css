@@ -1,23 +1,24 @@
 .container {
     box-sizing: border-box;
-    width: 90%;
+    max-width: 80%;
     display: flex;
-    flex-wrap: nowrap ;
+    flex-wrap: wrap ;
 }
 
 .row-1 {
-   width: 40%;
+   width: 50%;
 }
 .row-2 {
-    width: 40%;
-    height: 10vh;
+    width: 25%;
+    height: ;
+    
 }
 
 h1 {
     font-size: 21px;
 }
 img {
-    height: 20vh;
+    height: 200px;
 object-fit: cover;
 };
 

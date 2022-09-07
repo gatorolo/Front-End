@@ -1,5 +1,30 @@
 body {
     box-sizing: border-box;
-    }
+} 
 
+header {
+  position: static;
+  height: 100px;
+}
+
+.list-group {
+ 
+  flex-direction: row;
+}
+.container ul {
+ align-items: center;
+}
+
+.container ul li {
+ list-style: none;
+ margin-left: 20px;
+}
+
+.lista-item {
+  font-size: 25px;
+}
+
+.social {
+
+}
 
