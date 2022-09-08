@@ -1,24 +1,21 @@
-.container {
-    box-sizing: border-box;
-    max-width: 80%;
-    display: flex;
-    flex-wrap: wrap ;
-}
 
-.row-1 {
-   width: 50%;
-}
-.row-2 {
-    width: 25%;
-    
-    
-}
+.container {
+    position: relative;
+    top: 30px;
+    height: 450px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+  }
 
 h1 {
     font-size: 21px;
 }
 img {
-    height: 200px;
+    height: 100px;
+    width: 120px;
 object-fit: cover;
 };
 
