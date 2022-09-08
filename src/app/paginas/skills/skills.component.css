@@ -2,7 +2,7 @@
 .container {
    position: relative;
    top: 30px;
-   height: 450px;
+   height: 440px;
    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
    background: linear-gradient(0deg, #ddd, #fff);
    transition: .5s;
