@@ -1,18 +1,39 @@
-
 <header>
-  <div class="container">
-    <ul class="list-group">
-       <li class="lista-item"><a routerLink='/paginas/home'><fa-icon [icon]="faHome"></fa-icon></a></li>
-       <li class="lista-item"><a routerLink='/paginas/about'><fa-icon [icon]="faAddressCard"></fa-icon></a></li>
-       <li class="lista-item"><a routerLink='/paginas/skills'><fa-icon [icon]="faHeadSideVirus">skills</fa-icon></a></li>
-       
-       
-         <li class="lista-item social"><a href="#"><fa-icon [icon]="faFacebook"></fa-icon></a></li>
-         <li class="lista-item social"><a href="#"><fa-icon [icon]="faInstagram"></fa-icon></a></li>
-         <li class="lista-item social"><a href="https://github.com/gatorolo" target="_blank"><fa-icon [icon]="faGithub"></fa-icon></a></li>
-       
+  <div class="container-fluid">
+    <div class="paginas">
+      <div class="logo">
+        <img src="../assets/APLogo-20-20.png" alt="logo" class="logo">
+      </div>
+
+      <ul>
+        <li><a routerLink='/paginas/home'>
+            <fa-icon [icon]="faHome" class="active"></fa-icon>
+          </a></li>
+        <li><a routerLink='/paginas/about'>
+            <fa-icon [icon]="faAddressCard"></fa-icon>
+          </a></li>
+        <li><a routerLink='/paginas/skills'>
+            <fa-icon [icon]="faHeadSideVirus">skills</fa-icon>
+          </a></li>
+        <li><a href="">
+            <fa-icon [icon]="faBuildingColumns"></fa-icon>
+          </a></li>
       </ul>
-  
+    </div>
+
+    <div class="social">
+      <ul>
+        <li><a href="#">
+            <fa-icon [icon]="faFacebook" aria-hidden="true"></fa-icon>
+          </a></li>
+        <li><a href="#">
+            <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+          </a></li>
+        <li><a href="https://github.com/gatorolo" target="_blank">
+            <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
+          </a></li>
+      </ul>
+    </div>
   </div>
 </header>
 

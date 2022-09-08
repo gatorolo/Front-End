@@ -1,9 +1,12 @@
+
 .container {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     width: 90%;
+    top: 90px;
 }
 
 h1 {

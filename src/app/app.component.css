@@ -1,30 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    box-sizing: border-box;
-} 
+  margin: 0;
+  background-color: #000;
+}
 
 header {
-  position: static;
-  height: 100px;
+  height: 60px;
+  width: 100%;
+  background-color: #828282;
 }
 
-.list-group {
- 
-  flex-direction: row;
-}
-.container ul {
- align-items: center;
+.logo {
+  width: 100px;
 }
 
-.container ul li {
- list-style: none;
- margin-left: 20px;
+.paginas ul {
+  width: 5%;
+  text-align: center;
+  left: 200px;
 }
 
-.lista-item {
-  font-size: 25px;
+.paginas ul li {
+  left: 30px;
+}
+ul {
+  position: absolute;
+  top: 50px;
+  right: 5px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.social {
-
+ul li {
+  list-style: none;
+  padding: 0 5px;
 }
+
+ul li a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  padding: 0px ;
+  margin: -5px 0px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+}
+
+ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  text-decoration: none;
+}
+
+ul li a > fa-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 2px;
+  background: linear-gradient(0deg , #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 28px;
+  color: #262626;
+  transition:  .5s;
+}
+
+ul li:nth-child(1) a:hover fa-icon {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover fa-icon {
+  color: #e4405f;
+}
+
+ul li:nth-child(3) a:hover fa-icon {
+  color:#9c9c9c
+}
+
+ul li:nth-child(4) a:hover fa-icon {
+  color: aquamarine;
+}
+
+div li:nth-child() a:hover > fa-icon {
+  color: #fff;
+}
+
+
+
 

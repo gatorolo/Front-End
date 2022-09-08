@@ -5,6 +5,7 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faHome} from '@fortawesome/free-solid-svg-icons';
 import {faAddressCard} from '@fortawesome/free-solid-svg-icons';
 import {faHeadSideVirus} from '@fortawesome/free-solid-svg-icons';
+import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent {
   faGithub = faGithub;
   faHome = faHome;
   faHeadSideVirus = faHeadSideVirus;
-  faAddressCard = faAddressCard
+  faAddressCard = faAddressCard;
+  faBuildingColumns = faBuildingColumns
   
 }
