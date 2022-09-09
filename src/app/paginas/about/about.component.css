@@ -13,10 +13,13 @@ body {
   }
 
 h1 {
-    font-size: 21px;
+  font-size: 21px;
 }
 img {
-    width: 40%;
-    object-fit:cover;
+  position: relative;
+  width: 40%;
+  object-fit: cover;
+  bottom: -5px;
+  left:2%;
 }
 

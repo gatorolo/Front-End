@@ -14,7 +14,11 @@
 }
 
 img {
-    width: 40%;
-    object-fit:cover;
+  position: relative;
+  width: 40%;
+  height: px;
+  object-fit: cover;
+  top: 25%;
+  left:2%;
 }
 

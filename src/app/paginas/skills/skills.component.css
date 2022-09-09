@@ -14,8 +14,10 @@ body {
  
 
 img {
+   position: relative;
    width: 40%;
-   object-fit:cover;
-   bottom: 1px;
+   object-fit: cover;
+  margin-top: 35.1%;
+   left: 2%;
 }
  
