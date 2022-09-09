@@ -4,13 +4,12 @@
 
 body {
   margin: 0;
-  background-color: #000;
 }
 
 header {
   height: 60px;
   width: 100%;
-  background-color: #82898f;
+  background-color: #686a6b;
 }
 
 .logo {
@@ -82,7 +81,7 @@ ul li:nth-child(2) a:hover fa-icon {
 }
 
 ul li:nth-child(3) a:hover fa-icon {
-  color:#9c9c9c
+  color:#720b98
 }
 
 ul li:nth-child(4) a:hover fa-icon {

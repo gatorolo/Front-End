@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+ }
+ .container {
+    position: relative;
+    top: 30px;
+    height: 440px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+    scroll-behavior: smooth;
+  
+ }
+  
+ 
+ img {
+    position: relative;
+    width: 40%;
+    object-fit: cover;
+   margin-top: 35.1%;
+    left: 2%;
+ }
+  

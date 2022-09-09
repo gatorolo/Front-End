@@ -6,6 +6,8 @@ import { PaginasroutingModule } from './paginasrouting.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { StudiesComponent } from './studies/studies.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 
@@ -13,7 +15,9 @@ import { SkillsComponent } from './skills/skills.component';
   declarations: [
     HomeComponent,
     AboutComponent,
-    SkillsComponent
+    SkillsComponent,
+    StudiesComponent,
+    ProjectsComponent
   ],
   imports: [
     CommonModule,
