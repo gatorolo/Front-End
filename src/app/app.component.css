@@ -89,8 +89,8 @@ ul li:nth-child(4) a:hover fa-icon {
   color: aquamarine;
 }
 
-div li:nth-child() a:hover > fa-icon {
-  color: #fff;
+div li:nth-child(5) a:hover > fa-icon {
+  color: rgb(174, 234, 22);
 }
 
 

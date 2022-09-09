@@ -4,8 +4,6 @@ body {
 
 .container {
     position: relative;
-    display: flex;
-    flex-direction: column;
     top: 30px;
     height: 440px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
