@@ -1,4 +1,6 @@
-
+body {
+   box-sizing: border-box;
+}
 .container {
    position: relative;
    top: 30px;
@@ -11,10 +13,9 @@
 }
  
 
- img {
-    height: 60vh;
-    
-    text-align: center;
-    object-fit: cover;
- }
+img {
+   width: 40%;
+   object-fit:cover;
+   bottom: 1px;
+}
  

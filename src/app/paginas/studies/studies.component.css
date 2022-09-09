@@ -1,22 +1,33 @@
 body {
     box-sizing: border-box;
 }
+
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     top: 30px;
     height: 440px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     background: linear-gradient(0deg, #ddd, #fff);
     transition: .5s;
     scroll-behavior: smooth;
-    overflow-y: hidden;
-  }
+ }
 
-h1 {
-    font-size: 21px;
+.row {
+    height: 33%;
+    border: 1px solid blue;
+    width: 100%;
+    margin: 0%;
 }
-img {
-    width: 40%;
-    object-fit:cover;
+.inti {
+    position: relative;
+    height: 40%;
+    color: black;
+   object-fit: contain;
+   bottom: 0;
+   left: 0;
 }
 
+
+  

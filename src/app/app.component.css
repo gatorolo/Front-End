@@ -53,12 +53,11 @@ ul li a {
   text-decoration: none;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   background: linear-gradient(0deg, #ddd, #fff);
-  transition: .5s;
+  transition: .3s;
 }
 
-ul li a:hover {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-  text-decoration: none;
+ ul li a:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 ul li a > fa-icon {
