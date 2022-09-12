@@ -57,7 +57,7 @@ ul li a {
   text-decoration: none;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
   background: linear-gradient(0deg, #ddd, #fff);
-  transition: .3s;
+  transition: .9s;
 }
 
  ul li a:hover {
