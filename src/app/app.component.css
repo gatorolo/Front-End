@@ -60,6 +60,35 @@ ul li a {
   transition: .9s;
 }
 
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  font-family: Raleway;
+  position: absolute;
+  padding: 1px;
+  bottom: -1.6em;
+  left: 50%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 3px;
+  
+}
+[data-title] {
+  position: relative;
+}
+
  ul li a:hover {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
