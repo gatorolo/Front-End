@@ -31,7 +31,7 @@ header {
 }
 ul {
   position: absolute;
-  top: 48px;
+  top: 40px;
   right: 5px;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -51,7 +51,7 @@ ul li a {
   display: block;
   text-align: center;
   padding: 0px ;
-  margin: -5px 0px;
+  margin: 0px 0px;
   border-radius: 50%;
   border: solid .2px #fff;
   text-decoration: none;
@@ -73,8 +73,8 @@ ul li a {
   font-size: 14px;
   font-family: Raleway;
   position: absolute;
-  padding: 1px;
-  bottom: -1.6em;
+  padding: 0px 1px;
+  bottom: -1.5em;
   left: 50%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;

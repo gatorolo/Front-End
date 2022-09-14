@@ -2,23 +2,69 @@
     box-sizing: border-box;
 }
 .container {
+    display: flex;
+    flex-direction:row;
     position: relative;
     top: 28px;
-    height: 440px;
+    height: 435px;
+    width: 96%;
+    max-width: 99%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     background: linear-gradient(0deg, #ddd, #fff);
     transition: .5s;
-    scroll-behavior: smooth;
     overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url(../../../assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     
 }
 
-img {
-  position: relative;
-  width: 40%;
-  height: px;
+.mifoto-item {
+ position: relative;
+  left: 15%;
+  bottom: -50%;
+  height: 40%;
+  width: 120px;
+  border-radius: 50%;
   object-fit: cover;
-  top: 25%;
-  left:2%;
+}
+
+.row {
+  width: 33%;
+  padding: 0;
+  border: 0px solid rgb(74, 56, 56);
+  
+}
+
+.row-2 {
+  text-align: center;
+  align-items: center;
+}
+.row-2 .nombre {
+  display: block;
+  font-size: 1.6em;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #fff;
+}
+
+h2, h3, h4 {
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div .inti {
+  position: relative;
+  width: 200px;
+  left: 50%;
+  bottom: -50%;
 }
 
