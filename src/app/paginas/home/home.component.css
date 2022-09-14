@@ -9,7 +9,7 @@
     height: 435px;
     width: 96%;
     max-width: 99%;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.4);
     background: linear-gradient(0deg, #ddd, #fff);
     transition: .5s;
     overflow-y: hidden;
@@ -19,20 +19,21 @@
     background-size: cover;
     
     
+    
 }
 
 .mifoto-item {
  position: relative;
   left: 15%;
-  bottom: -50%;
-  height: 40%;
-  width: 120px;
+  bottom: -40%;
+  height: 50%;
+  width: 160px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .row {
-  width: 33%;
+  width: 40%;
   padding: 0;
   border: 0px solid rgb(74, 56, 56);
   
@@ -58,13 +59,14 @@ h1 {
 
 h2, h3, h4 {
   color: #ddd;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 div .inti {
   position: relative;
-  width: 200px;
-  left: 50%;
-  bottom: -50%;
+  width: 250px;
+  left: 20%;
+  bottom: -47%;
 }
 
