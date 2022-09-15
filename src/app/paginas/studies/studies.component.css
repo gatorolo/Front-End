@@ -5,8 +5,8 @@ body {
 .container {
     position: relative;
     top: 28px;
-    height: 435px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    height: 438px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.3);
     background: linear-gradient(0deg, #ddd, #fff);
     transition: .5s;
     scroll-behavior: smooth;

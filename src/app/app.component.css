@@ -14,10 +14,10 @@ header {
 }
 
 .logo {
-  position: absolute;
-  width: 40%;
-  height: 100px;
-  bottom: -10px;
+ position: absolute;
+  width: 43%;
+  bottom: -14.5px;
+  
 }
 
 .paginas ul {
@@ -31,7 +31,7 @@ header {
 }
 ul {
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 5px;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -70,11 +70,11 @@ ul li a {
   content: attr(data-title);
   background-color: #333;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-family: Raleway;
   position: absolute;
   padding: 0px 1px;
-  bottom: -1.5em;
+  bottom: -1.1em;
   left: 50%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
