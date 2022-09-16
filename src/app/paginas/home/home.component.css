@@ -69,7 +69,7 @@ div .inti {
 }
 
 .mifoto {
-  animation: movimiento 80s linear infinite;
+  animation: movimiento 150s linear infinite;
 }
 
 @keyframes movimiento {

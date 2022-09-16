@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {faFacebook} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faHome} from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,7 @@ import {faAddressCard} from '@fortawesome/free-solid-svg-icons';
 import {faHeadSideVirus} from '@fortawesome/free-solid-svg-icons';
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
+import {faLinkSlash} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +16,14 @@ import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'porfolio';
-  faFacebook = faFacebook;
+  faFacebookF = faFacebookF;
   faInstagram = faInstagram;
   faGithub = faGithub;
   faHome = faHome;
   faHeadSideVirus = faHeadSideVirus;
   faAddressCard = faAddressCard;
   faBuildingColumns = faBuildingColumns;
-  faDiagramProject = faDiagramProject
+  faDiagramProject = faDiagramProject;
+  faLinkSlash =  faLinkSlash
   
 }

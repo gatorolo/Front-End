@@ -93,7 +93,7 @@ ul li a {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-ul li a > fa-icon {
+ul li a  fa-icon {
   width: 100%;
   height: 100%;
   display: block;
@@ -104,26 +104,41 @@ ul li a > fa-icon {
   font-size: 28px;
   color: #262626;
   transition:  .5s;
+
 }
 
+ul li a:hover fa-icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+/* ul li a:hover:before {
+  top: 0;
+} */
+
 ul li:nth-child(1) a:hover fa-icon {
-  color: #3b5998;
+  
+  background: #3b5999;
 }
 
 ul li:nth-child(2) a:hover fa-icon {
-  color: #e4405f;
+  color: #fff;
+  background: #f8718a;
 }
 
 ul li:nth-child(3) a:hover fa-icon {
-  color:#720b98
+  color: #fff;
+  background: #a515da
 }
 
 ul li:nth-child(4) a:hover fa-icon {
-  color: aquamarine;
+  color: #fff;
+  background: aquamarine;
 }
 
 div li:nth-child(5) a:hover > fa-icon {
-  color: rgb(157, 199, 53);
+  color: #fff;
+  background: rgb(143, 180, 49);
 }
 
 
