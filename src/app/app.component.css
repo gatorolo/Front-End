@@ -16,14 +16,14 @@ header {
 .logo {
  position: absolute;
   width: 43%;
-  bottom: -14.5px;
+  bottom: -13px;
   
 }
 
 .paginas ul {
   width: 5%;
   text-align: center;
-  left: 250px;
+  left: 222px;
 }
 
 .paginas ul li {
@@ -37,6 +37,11 @@ ul {
   margin: 0;
   padding: 0;
   display: flex;
+}
+
+.social {
+  display: flex;
+  right: -8%;
 }
 
 ul li {
@@ -71,7 +76,7 @@ ul li a {
   background-color: #333;
   color: #fff;
   font-size: 15px;
-  font-family: Raleway;
+  font-family: Roboto;
   position: absolute;
   padding: 0px 1px;
   bottom: -1.1em;
@@ -112,10 +117,6 @@ ul li a:hover fa-icon {
   transform: rotateY(360deg);
 }
 
-/* ul li a:hover:before {
-  top: 0;
-} */
-
 ul li:nth-child(1) a:hover fa-icon {
   
   background: #3b5999;
@@ -128,17 +129,17 @@ ul li:nth-child(2) a:hover fa-icon {
 
 ul li:nth-child(3) a:hover fa-icon {
   color: #fff;
-  background: #a515da
+  background: #805bde
 }
 
 ul li:nth-child(4) a:hover fa-icon {
   color: #fff;
-  background: aquamarine;
+  background: rgb(68, 236, 239);
 }
 
 div li:nth-child(5) a:hover > fa-icon {
   color: #fff;
-  background: rgb(143, 180, 49);
+  background:#6fc079  ;
 }
 
 
