@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {faFacebookF, faLinkedinIn, faWhatsapp, faWhatsappSquare} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faHome} from '@fortawesome/free-solid-svg-icons';
@@ -24,5 +25,6 @@ export class AppComponent {
   faAddressCard = faAddressCard;
   faBuildingColumns = faBuildingColumns;
   faDiagramProject = faDiagramProject;
-  faAt = faAt
+  faAt = faAt;
+  faLinkedinIn = faLinkedinIn
 }

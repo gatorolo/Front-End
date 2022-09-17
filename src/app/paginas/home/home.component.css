@@ -52,13 +52,38 @@
 }
 
 h1 {
+  color: rgb(182, 173, 173);
+}
+
+h1 span {
+  transition: .3s linear;
+}
+
+h1:hover span {
   color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 30px #fff,
+   0 0 60px #fff;
 }
 
 h2, h3, h4 {
-  color: #ddd;
+  color: rgb(182, 173, 173);
   background-color: rgba(0, 0, 0, 0.5);
   
+}
+
+h4:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 50px #fff;
+}
+
+h3:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 50px #fff;
 }
 
 div .inti {

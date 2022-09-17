@@ -9,7 +9,7 @@ body {
 header {
   position:relative;
   height: 58px;
-  width: 100%;
+  max-width: 100%;
   background-color: #14a5ed;
 }
 
@@ -61,7 +61,7 @@ ul li a {
   border: solid .2px #fff;
   text-decoration: none;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(0deg, #ddd, #fff);
+  background: linear-gradient(0deg, #ddd, rgb(248, 230, 230));
   transition: .9s;
 }
 
@@ -129,12 +129,12 @@ ul li:nth-child(2) a:hover fa-icon {
 
 ul li:nth-child(3) a:hover fa-icon {
   color: #fff;
-  background: #805bde
+  background: #9c77fc
 }
 
 ul li:nth-child(4) a:hover fa-icon {
   color: #fff;
-  background: rgb(68, 236, 239);
+  background: rgb(27, 10, 175);
 }
 
 div li:nth-child(5) a:hover > fa-icon {
