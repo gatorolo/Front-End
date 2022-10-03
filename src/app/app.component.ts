@@ -9,6 +9,7 @@ import {faHeadSideVirus} from '@fortawesome/free-solid-svg-icons';
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
 import {faAt} from '@fortawesome/free-solid-svg-icons';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -26,5 +27,6 @@ export class AppComponent {
   faBuildingColumns = faBuildingColumns;
   faDiagramProject = faDiagramProject;
   faAt = faAt;
-  faLinkedinIn = faLinkedinIn
+  faLinkedinIn = faLinkedinIn;
+  faBars = faBars
 }

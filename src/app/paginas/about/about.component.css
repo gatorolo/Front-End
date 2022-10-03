@@ -2,19 +2,25 @@ body {
     box-sizing: border-box;
 }
 .container {
-    position: relative;
-    top: 25px;
-    height: 438px;
-    width: 96%;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(0deg, #ddd, #fff);
-    transition: .5s;
-    scroll-behavior: smooth;
-    overflow-y: hidden;
-  }
+  position: relative;
+  top: 2.6em;
+  height: 82vh;
+  width: 93vw;
+  align-items: center;
+  box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
+  background: linear-gradient(10deg, #ececec, #fff);
+  transition: .5s;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
 h1 {
   font-size: 21px;
+}
+
+h1::selection {
+  background: rgb(149, 221, 213);
+  color: cadetblue;
 }
 img {
   position: relative;

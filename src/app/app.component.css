@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -7,46 +8,35 @@ body {
 }
 
 header {
-  position:relative;
-  height: 58px;
-  max-width: 100%;
+  position: sticky;
+  height: 4.5em;
+  width: 99%;
   background-color: #14a5ed;
+  z-index: 9999;
 }
 
 .logo {
- position: absolute;
-  width: 43%;
-  bottom: -13px;
-  
+  width: 45%;
+  height: 6em;
+  margin: -22px 0px 0px 0px;
 }
 
-.paginas ul {
-  width: 5%;
-  text-align: center;
-  left: 222px;
-}
 
-.paginas ul li {
-  left: 30px;
-}
-ul {
+
+.navbar ul {
   position: absolute;
-  top: 44px;
-  right: 5px;
+  display: flex;
+  top: 25px;
+  right: -35%;
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-.social {
-  display: flex;
-  right: -8%;
-}
 
 ul li {
   list-style: none;
-  padding: 0 5px;
+  padding: 0 2px;
 }
 
 ul li a {
@@ -56,13 +46,58 @@ ul li a {
   display: block;
   text-align: center;
   padding: 0px ;
-  margin: 0px 0px;
+  margin: 5px 5px 5px 10px;
   border-radius: 50%;
   border: solid .2px #fff;
   text-decoration: none;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
   background: linear-gradient(0deg, #ddd, rgb(248, 230, 230));
   transition: .9s;
+  bottom: 20px;
+}
+
+.checkbtn {
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  border: 1px solid #fff;
+  padding: 0px 3px;
+  top: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.social {
+  position: fixed;
+  top: 114px;
+  width: 40%;
+  height: 82vh;
+  right: -100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  transition: 2s;
+}
+
+.social li {
+  top: 25%;
+  position: relative;
+ padding:  25% 15%;
+ right: 0;
+}
+
+
+#check {
+  display: none;
+}
+
+
+#check:checked + .social {
+  display: flex;
+  display: block;
+  text-align: center;
+  right: 3.5%;
+  transition: all .6s ease;
 }
 
 
@@ -70,6 +105,7 @@ ul li a {
   opacity: 1;
   transition: all 0.1s ease 0.5s;
   visibility: visible;
+  z-index: 99;
 }
 [data-title]:after {
   content: attr(data-title);
@@ -79,7 +115,7 @@ ul li a {
   font-family: Roboto;
   position: absolute;
   padding: 0px 1px;
-  bottom: -1.1em;
+  bottom: 1em;
   left: 50%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
@@ -97,6 +133,7 @@ ul li a {
  ul li a:hover {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
+
 
 ul li a  fa-icon {
   width: 100%;
@@ -117,8 +154,9 @@ ul li a:hover fa-icon {
   transform: rotateY(360deg);
 }
 
+
 ul li:nth-child(1) a:hover fa-icon {
-  
+  color: #fff;
   background: #3b5999;
 }
 
@@ -129,7 +167,7 @@ ul li:nth-child(2) a:hover fa-icon {
 
 ul li:nth-child(3) a:hover fa-icon {
   color: #fff;
-  background: #9c77fc
+  background: #9c77fc;
 }
 
 ul li:nth-child(4) a:hover fa-icon {
@@ -137,11 +175,31 @@ ul li:nth-child(4) a:hover fa-icon {
   background: rgb(27, 10, 175);
 }
 
-div li:nth-child(5) a:hover > fa-icon {
+ul li:nth-child(5) a:hover > fa-icon {
   color: #fff;
-  background:#6fc079  ;
+  background:#81c2c6  ;
 }
 
+ul li:nth-child(6) a:hover fa-icon {
+  color: #fff;
+  background: rgb(4, 3, 17);
+}
+
+.social > li {
+  animation: movimiento 60s linear infinite;
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 
 
