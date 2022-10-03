@@ -3,8 +3,8 @@
 }
 .container {
     position: relative;
-    top: 2.6em;
-    height: 82vh;
+    top: 2.8em;
+    height: 80.5vh;
     width: 93vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
@@ -14,8 +14,7 @@
     overflow-x: hidden;
     background-image: url(../../../assets/banner.jpg);
     background-repeat: no-repeat;
-    background-size: cover ; 
-    z-index: 99;
+    background-size: cover ;
 }
 
 .mifoto-item {

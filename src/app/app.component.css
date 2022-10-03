@@ -9,7 +9,7 @@ body {
 
 header {
   position: sticky;
-  height: 4.5em;
+  height: 4.8em;
   width: 99%;
   background-color: #14a5ed;
   z-index: 9999;
@@ -17,8 +17,8 @@ header {
 
 .logo {
   width: 45%;
-  height: 6em;
-  margin: -22px 0px 0px 0px;
+  height: 6.4em;
+  margin: -15px 0px 0px 0px;
 }
 
 
@@ -41,42 +41,48 @@ ul li {
 
 ul li a {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 3em;
+  height: 3em;
   display: block;
   text-align: center;
   padding: 0px ;
-  margin: 5px 5px 5px 10px;
+  margin: 5px 5px 5px 14px;
   border-radius: 50%;
   border: solid .2px #fff;
   text-decoration: none;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
   background: linear-gradient(0deg, #ddd, rgb(248, 230, 230));
   transition: .9s;
-  bottom: 20px;
+  bottom: 25px;
 }
 
 .checkbtn {
   position: absolute;
-  right: 20px;
+  right: 15px;
   font-size: 30px;
   border: 1px solid #fff;
   padding: 0px 3px;
-  top: 5px;
+  top: 14px;
   border-radius: 8px;
   cursor: pointer;
 }
 
+.checkbtn:hover {
+  color: #fff;
+  transform: rotateY(720deg);
+}
+
 .social {
   position: fixed;
-  top: 114px;
+  top: 122px;
   width: 40%;
-  height: 82vh;
+  height: 80.5vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   transition: 2s;
+  z-index: 199;
 }
 
 .social li {
@@ -84,6 +90,10 @@ ul li a {
   position: relative;
  padding:  25% 15%;
  right: 0;
+}
+
+.social li a {
+  box-shadow: 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -111,17 +121,17 @@ ul li a {
   content: attr(data-title);
   background-color: #333;
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   font-family: Roboto;
   position: absolute;
   padding: 0px 1px;
-  bottom: 1em;
-  left: 50%;
+  bottom: .5em;
+  left: 48%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
   opacity: 0;
   border: 1px solid #111111;
-  z-index: 99999;
+  z-index: 99;
   visibility: hidden;
   border-radius: 3px;
   
