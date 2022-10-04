@@ -74,15 +74,15 @@ ul li a {
 
 .social {
   position: fixed;
-  top: 122px;
+  top: 121px;
   width: 40%;
-  height: 80.5vh;
+  height: 80.6vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   transition: 2s;
-  z-index: 199;
+  z-index: 1;
 }
 
 .social li {
@@ -103,10 +103,9 @@ ul li a {
 
 
 #check:checked + .social {
-  display: flex;
   display: block;
   text-align: center;
-  right: 3.5%;
+  right: 3.3%;
   transition: all .6s ease;
 }
 
@@ -115,7 +114,7 @@ ul li a {
   opacity: 1;
   transition: all 0.1s ease 0.5s;
   visibility: visible;
-  z-index: 99;
+  z-index: 299;
 }
 [data-title]:after {
   content: attr(data-title);
@@ -124,14 +123,14 @@ ul li a {
   font-size: 20px;
   font-family: Roboto;
   position: absolute;
-  padding: 0px 1px;
-  bottom: .5em;
-  left: 48%;
+  padding: 1px 1px;
+  bottom: .7em;
+  left: 50%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
   opacity: 0;
   border: 1px solid #111111;
-  z-index: 99;
+  z-index: 299;
   visibility: hidden;
   border-radius: 3px;
   
