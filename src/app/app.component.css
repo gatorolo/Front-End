@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 
 }
 
@@ -19,6 +20,15 @@ header {
   width: 45%;
   height: 6.4em;
   margin: -15px 0px 0px 0px;
+}
+
+a span {
+  position: relative;
+  top: -3px;
+  font-size: 1.6em;
+  color: #fff;
+  text-decoration: none;
+
 }
 
 
@@ -56,6 +66,8 @@ ul li a {
   bottom: 25px;
 }
 
+
+
 .checkbtn {
   position: absolute;
   right: 15px;
@@ -82,20 +94,19 @@ ul li a {
   display: flex;
   flex-direction: column;
   transition: 2s;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .social li {
   top: 25%;
   position: relative;
- padding:  25% 15%;
+ padding:  20% 15%;
  right: 0;
 }
 
 .social li a {
   box-shadow: 0 10px 5px rgba(255, 255, 255, 0.3);
 }
-
 
 #check {
   display: none;
@@ -114,8 +125,13 @@ ul li a {
   opacity: 1;
   transition: all 0.1s ease 0.5s;
   visibility: visible;
-  z-index: 299;
+  z-index: 999;
 }
+
+[data-title] {
+  position: relative;
+}
+
 [data-title]:after {
   content: attr(data-title);
   background-color: #333;
@@ -134,9 +150,6 @@ ul li a {
   visibility: hidden;
   border-radius: 3px;
   
-}
-[data-title] {
-  position: relative;
 }
 
  ul li a:hover {
@@ -191,7 +204,7 @@ ul li:nth-child(5) a:hover > fa-icon {
 
 ul li:nth-child(6) a:hover fa-icon {
   color: #fff;
-  background: rgb(4, 3, 17);
+  background: rgb(234, 126, 38);
 }
 
 .social > li {

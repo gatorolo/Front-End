@@ -9,26 +9,80 @@ body {
     width: 93vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    background: linear-gradient(10deg, #ececec, #fff);
+    background: linear-gradient(10deg, #728caa, rgb(70, 136, 235));
     transition: .5s;
     overflow-y: hidden;
     overflow-x: hidden;
+    padding: 10px 0px;
  }
 
-.row {
-    height: 33%;
-    border: 1px solid blue;
-    width: 100%;
-    margin: 0%;
+ .col {
+  padding: 10px;
+ }
+
+img {
+  width: 100%;
+  padding: 0px 15px;
 }
-.inti {
+
+.container p {
+  font-size: 14px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+
+
+.container-all {
+  width: 100%;
+  height: 40%;
+  top: 20vh;
+  left: 0;
+  position: fixed;
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.container-all:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container-all:target .popup {
+  visibility: visible;
+}
+
+.popup {
+width: 100%;
+display: flex;
+}
+
+.popup img {
   position: relative;
-  width: 41.1%;
+  width: 100%;
   object-fit: cover;
-  top: 26%;
-  left: 0.6%;
+  top: 15%;
+  text-align: center;
 }
 
+.btn-close {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: -20px;
+  padding: 5px;
+  line-height: 18px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+}
 
-
+.modal {
+  z-index: 99999;
+}
   

@@ -2,6 +2,7 @@
     <div class="row">
       <a href="/*https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa*/" target="_blank">
         <img class="logo" src="../assets/APLogo-20-20.png" alt="logo">
+        <span class="mobile">Mobile</span>
       </a>
     <nav class="navbar">
       <ul class="">
@@ -12,7 +13,7 @@
             <fa-icon [icon]="faAddressCard"></fa-icon>
           </a></li>
         <li data-title="Skills"><a routerLink='/paginas/skills'>
-            <fa-icon [icon]="faHeadSideVirus">skills</fa-icon>
+            <fa-icon [icon]="faGears">skills</fa-icon>
           </a></li>
         <li data-title="Studies"><a routerLink='/paginas/studies'>
             <fa-icon [icon]="faBuildingColumns"></fa-icon>
@@ -28,7 +29,7 @@
 
     <div>
 
-      <label for="check" class="checkbtn"><fa-icon [icon]="faBars"></fa-icon></label>
+      <label for="check" class="checkbtn"><fa-icon [icon]="faBars" aria-hidden="true"></fa-icon></label>
       <input type="checkbox" id="check">
       <ul class="social">
 
@@ -44,7 +45,11 @@
           <li><a href="#">
             <fa-icon [icon]="faLinkedinIn" aria-hidden="true"></fa-icon>
           </a>
-        </li>
+        </li><br>
+        <li><a href="https://www.google.com" target="_blank" class="edit">
+          <fa-icon [icon]="faUserPen" aria-hidden="true"></fa-icon>
+        </a>
+      </li>
       </ul>
     </div>
 </header>
