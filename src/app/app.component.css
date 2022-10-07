@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -87,7 +88,7 @@ ul li a {
 .social {
   position: fixed;
   top: 121px;
-  width: 40%;
+  width: 42%;
   height: 80.6vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -116,7 +117,7 @@ ul li a {
 #check:checked + .social {
   display: block;
   text-align: center;
-  right: 3.3%;
+  right: 3.4%;
   transition: all .6s ease;
 }
 

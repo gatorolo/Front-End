@@ -8,10 +8,12 @@ body {
     width: 93vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    background: linear-gradient(10deg, #ececec, #fff);
     transition: .5s;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-image: url(../../../assets/entity3.webp);
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {

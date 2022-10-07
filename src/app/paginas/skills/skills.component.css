@@ -7,20 +7,15 @@ body {
     height: 80.5vh;
     width: 93vw;
     align-items: center;
+    background-color: #cd8316;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
     background: linear-gradient(10deg, #ececec, #fff);
     transition: .5s;
     overflow-y: hidden;
     overflow-x: hidden;
- 
-}
- 
-
-img {
-   position: relative;
-   width: 40%;
-   object-fit: cover;
-  margin-top: 35.1%;
-   left: 2%;
+   background-image: url(../../../assets/entity2.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
  

@@ -9,11 +9,12 @@ body {
     width: 93vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    background: linear-gradient(10deg, #728caa, rgb(70, 136, 235));
     transition: .5s;
     overflow-y: hidden;
     overflow-x: hidden;
     padding: 10px 0px;
+    background-image: url(../../../assets/EntityFramework-600x300.jpg);
+    background-size: cover;
  }
 
  .col {
@@ -25,64 +26,21 @@ img {
   padding: 0px 15px;
 }
 
-.container p {
+.titulo {
   font-size: 14px;
   display: block;
   color: #fff;
   text-align: center;
   line-height: 20px;
-}
-
-
-.container-all {
-  width: 100%;
-  height: 40%;
-  top: 20vh;
-  left: 0;
-  position: fixed;
-  visibility: visible;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.container-all:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.container-all:target .popup {
-  visibility: visible;
-}
-
-.popup {
-width: 100%;
-display: flex;
-}
-
-.popup img {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-  top: 15%;
-  text-align: center;
-}
-
-.btn-close {
-  font-size: 30px;
-  width: 30px;
-  height: 30px;
-  text-decoration: none;
-  text-align: center;
-  position: absolute;
-  right: 0px;
-  top: -20px;
-  padding: 5px;
-  line-height: 18px;
-  background: #000;
-  color: #fff;
-  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal {
   z-index: 99999;
+}
+
+.modal-body img:hover {
+  transform: scale(120%);
 }
   
