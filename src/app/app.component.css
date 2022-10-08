@@ -101,12 +101,13 @@ ul li a {
 .social li {
   top: 25%;
   position: relative;
- padding:  20% 15%;
- right: 0;
+  padding:  20% 15%;
+  right: 0;
 }
 
 .social li a {
   box-shadow: 0 10px 5px rgba(255, 255, 255, 0.3);
+  padding: 0 4px;
 }
 
 #check {
@@ -126,7 +127,7 @@ ul li a {
   opacity: 1;
   transition: all 0.1s ease 0.5s;
   visibility: visible;
-  z-index: 999;
+  z-index: 1999;
 }
 
 [data-title] {
@@ -150,7 +151,7 @@ ul li a {
   z-index: 299;
   visibility: hidden;
   border-radius: 3px;
-  
+  z-index: 1999;
 }
 
  ul li a:hover {
@@ -163,6 +164,7 @@ ul li a  fa-icon {
   height: 100%;
   display: block;
   margin: 0px;
+  padding: 0 8px;
   background: linear-gradient(0deg , #fff, #ddd);
   border-radius: 50%;
   line-height: calc(60px - 12px);
@@ -185,22 +187,22 @@ ul li:nth-child(1) a:hover fa-icon {
 
 ul li:nth-child(2) a:hover fa-icon {
   color: #fff;
-  background: #f8718a;
+  background: rgb(18, 96, 122);
 }
 
 ul li:nth-child(3) a:hover fa-icon {
   color: #fff;
-  background: #9c77fc;
+  background: rgb(150, 210, 231);
 }
 
 ul li:nth-child(4) a:hover fa-icon {
   color: #fff;
-  background: rgb(27, 10, 175);
+  background: rgb(51, 190, 212);
 }
 
 ul li:nth-child(5) a:hover > fa-icon {
   color: #fff;
-  background:#81c2c6  ;
+  background:rgb(102, 179, 173)  ;
 }
 
 ul li:nth-child(6) a:hover fa-icon {
