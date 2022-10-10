@@ -192,17 +192,17 @@ ul li:nth-child(2) a:hover fa-icon {
 
 ul li:nth-child(3) a:hover fa-icon {
   color: #fff;
-  background: rgb(150, 210, 231);
+  background: rgb(154, 225, 245);
 }
 
 ul li:nth-child(4) a:hover fa-icon {
   color: #fff;
-  background: rgb(51, 190, 212);
+  background: rgb(14, 179, 205);
 }
 
 ul li:nth-child(5) a:hover > fa-icon {
   color: #fff;
-  background:rgb(102, 179, 173)  ;
+  background:rgb(83, 153, 147)  ;
 }
 
 ul li:nth-child(6) a:hover fa-icon {
