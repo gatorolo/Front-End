@@ -21,8 +21,8 @@ body {
    width: 100%;
    text-align: center;
    color: #fff;
-   height: 28vh;
-   padding-top: 10px;}
+   height: 27.5vh;
+   padding-top: 18px;}
 
  .container-item .titulo {
    font-size: 1.3em;
@@ -44,14 +44,14 @@ body {
 
  .container-item:hover {
    transform: scale(1.12);
-   background-color: #000;
+   background-color: rgba(0, 0, 0, 0.7);
    font-size: 1em;
-   top: 5px;
-   bottom: 3px;
-   padding: 10px 0 0;
-   height: 30vh;
-   transition: all .8s ease;
-   z-index: 10999;
+   top: 15px;
+   bottom: 10px;
+   padding: 3px 0 5px;
+   height: 29vh;
+   transition: all .7s ease;
+   z-index: 9999;
  }
   
  

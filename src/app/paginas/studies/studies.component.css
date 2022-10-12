@@ -6,7 +6,7 @@ body {
   position: relative;
     top: 2.8em;
     height: 80.5vh;
-    width: 93vw;
+    width: 95vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
     transition: .5s;
@@ -31,7 +31,7 @@ img {
   display: block;
   color: #fff;
   text-align: center;
-  line-height: 20px;
+  line-height: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -40,7 +40,7 @@ img {
   z-index: 99999;
 }
 .modal-body img {
-  transform: scale(1.);
+  transform: scale(1);
   overflow: hidden;
   transition: all .4s ease;
 }

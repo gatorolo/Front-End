@@ -3,19 +3,152 @@ body {
 }
 .container {
    position: relative;
-    top: 2.8em;
-    height: 80.5vh;
-    width: 93vw;
-    align-items: center;
-    background-color: #cd8316;
-    box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    background: linear-gradient(10deg, #ececec, #fff);
-    transition: .5s;
-    overflow-y: hidden;
-    overflow-x: hidden;
+   top: 2.8em;
+   height: 80.5vh;
+   width: 95vw;
+   align-items: center;
+   background-color: #cd8316;
+   box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
+   background: linear-gradient(10deg, #ececec, #fff);
+   transition: .5s;
+   overflow-y: hidden;
+   overflow-x: hidden;
    background-image: url(../../../assets/entity2.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
 }
- 
+
+.skills h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.progress-bar {
+   background: #959595;
+   width: 100%;
+   height: 28px;
+   border-radius: 5px;
+   margin-top: 13px;
+}
+
+.progress-bar div {
+   height: 10px;
+   border-radius: 10px;
+   width: 0%;
+}
+
+.progress-bar div span {
+   height: 45px;
+   width: 65px;
+   border-radius: 50%;
+   background: #fff;
+   float: right;
+   font-weight: 700;
+   margin-top: -20px;
+   margin-right: 7px;
+   color: #333;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.html {
+background: 	rgb(136, 239, 158);
+animation: html 1.3s linear forwards;
+}
+
+.css {
+background: rgb(136, 239, 158);
+animation: css 1.3s linear forwards;
+}
+
+.javascript {
+  background: rgb(136, 239, 158);
+  animation: javascript 1.3s linear forwards;
+}
+
+.ruby {
+background: rgb(136, 239, 158);
+animation: ruby 1s linear forwards;
+}
+
+.angular {
+  background: rgb(136, 239, 158);
+  animation: angular 1s linear forwards;
+}
+
+.cloud {
+background: rgb(136, 239, 158);
+animation: cloud 1s linear forwards;
+}
+
+.html span {
+   border: 3px solid #68b7e1;
+}
+
+.css span {
+   border: 3px solid #68b7e1;
+}
+
+.javascript span {
+   border: 3px solid#68b7e1;
+}
+
+.ruby span {
+   border: 3px solid#68b7e1;
+}
+
+.angular span {
+   border: 3px solid#68b7e1;
+}
+
+.cloud span {
+   border: 3px solid#68b7e1;
+}
+
+@keyframes html {
+   100% {
+      width: 100%;
+   }
+}
+
+@keyframes css {
+   100% {
+      width: 100%;
+   }
+}
+
+@keyframes javascript {
+   100% {
+      width: 50%;
+   }
+}
+
+@keyframes ruby {
+   100% {
+      width: 25%;
+   }
+}
+
+@keyframes angular {
+   100% {
+      width: 23%;
+   }
+}
+
+@keyframes cloud {
+   100% {
+      width: 20%;
+   }
+}
+
+
+

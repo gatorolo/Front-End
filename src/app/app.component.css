@@ -88,7 +88,7 @@ ul li a {
 .social {
   position: fixed;
   top: 121px;
-  width: 42%;
+  width: 43%;
   height: 80.6vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -101,7 +101,7 @@ ul li a {
 .social li {
   top: 25%;
   position: relative;
-  padding:  20% 15%;
+  padding:  19%;
   right: 0;
 }
 
@@ -118,7 +118,7 @@ ul li a {
 #check:checked + .social {
   display: block;
   text-align: center;
-  right: 3.4%;
+  right: 2.2%;
   transition: all .6s ease;
 }
 
@@ -197,7 +197,7 @@ ul li:nth-child(3) a:hover fa-icon {
 
 ul li:nth-child(4) a:hover fa-icon {
   color: #fff;
-  background: rgb(14, 179, 205);
+  background: rgb(127, 186, 195);
 }
 
 ul li:nth-child(5) a:hover > fa-icon {
@@ -219,7 +219,7 @@ ul li:nth-child(6) a:hover fa-icon {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(1px);
+    transform: translateY(10px);
   }
   100% {
     transform: translateY(0);
