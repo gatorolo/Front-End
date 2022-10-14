@@ -28,10 +28,14 @@ body {
    font-size: 1.3em;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
    background-color: rgba(0, 0, 0, 0.6);
+   color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 50px #fff;
  }
 
  .container-item span {
-   font-size: 1em;
+   font-size: 1.1rem;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
    background-color: rgba(0, 0, 0, 0.6);
  }
@@ -46,6 +50,7 @@ body {
    transform: scale(1.12);
    background-color: rgba(0, 0, 0, 0.7);
    font-size: 1em;
+   cursor: pointer;
    top: 15px;
    bottom: 10px;
    padding: 3px 0 5px;

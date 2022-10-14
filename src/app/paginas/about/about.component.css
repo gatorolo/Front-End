@@ -16,19 +16,31 @@ body {
     background-size: cover;
 }
 
-h1 {
-  font-size: 21px;
+.carousel {
+  height: 100vh;
+  margin-top: 20%;
 }
 
-h1::selection {
-  background: rgb(149, 221, 213);
-  color: cadetblue;
+.carousel-item img {
+height: 60vh;
+width: 100%;
 }
-img {
-  position: relative;
-  width: 40%;
-  object-fit: cover;
-  bottom: -5px;
-  left:2%;
+
+.carousel-control-prev, .carousel-control-next {
+  top: -45%;
 }
+
+.parrafo {
+  font-size: 1.8em;
+  color: aliceblue;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  background-color: rgba(74, 87, 90, 0.3);
+  padding: 10px 5px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 50px #fff;
+}
+
 

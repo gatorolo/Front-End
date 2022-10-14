@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    transition-delay: 1s 
 }
 .container {
     position: relative;
@@ -9,7 +10,7 @@
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
     background: linear-gradient(10deg, #ececec, #fff);
-    transition: .5s;
+    transition: 1s;
     overflow-y: hidden;
     overflow-x: hidden;
     background-image: url(../../../assets/banner.jpg);
@@ -78,7 +79,6 @@ h2, h3, h4 {
   text-align: center;
   padding: 1em;
   margin-bottom: 1.5em;
-  
 }
 
 h4:hover {

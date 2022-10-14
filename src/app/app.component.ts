@@ -10,7 +10,8 @@ import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
 import {faAt} from '@fortawesome/free-solid-svg-icons';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {faUserPen} from '@fortawesome/free-solid-svg-icons';
+import {faPen } from '@fortawesome/free-solid-svg-icons';
+import {faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -30,5 +31,6 @@ export class AppComponent {
   faAt = faAt;
   faLinkedinIn = faLinkedinIn;
   faBars = faBars;
-  faUserPen = faUserPen
+  faPen = faPen;
+  faUser = faUser
 }

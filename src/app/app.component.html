@@ -1,12 +1,12 @@
 <header class="container">
     <div class="row">
-      <a href="/*https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa*/" target="_blank">
+      <a href="/">
         <img class="logo" src="../assets/APLogo-20-20.png" alt="logo">
         <span class="mobile">Mobile</span>
       </a>
     <nav class="navbar">
       <ul class="">
-        <li data-title="Home" ><a routerLink='/paginas/home'>
+        <li data-title="Home" ><a class="active" routerLink='/paginas/home'>
             <fa-icon [icon]="faHome" class="active"></fa-icon>
           </a></li>
         <li data-title="About"><a routerLink='/paginas/about'>
@@ -39,16 +39,20 @@
         <li><a href="#">
             <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
           </a></li>
-        <li><a href="https://github.com/gatorolo" target="about_blank">
+        <li><a href="https://github.com/gatorolo" target="_blank">
             <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
           </a></li>
           <li><a href="#">
             <fa-icon [icon]="faLinkedinIn" aria-hidden="true"></fa-icon>
           </a>
-        </li><br>
-        <li><a href="https://www.google.com" target="_blank" class="edit">
-          <fa-icon [icon]="faUserPen" aria-hidden="true"></fa-icon>
+        </li>
+        <li data-title="Edit"><a>
+          <fa-icon [icon]="faPen" aria-hidden="true"></fa-icon>
         </a>
+      </li>
+      <li data-title="Login"><a>
+        <fa-icon [icon]="faUser"></fa-icon>
+      </a>
       </li>
       </ul>
     </div>

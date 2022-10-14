@@ -27,13 +27,17 @@ img {
 }
 
 .titulo {
-  font-size: 14px;
+  font-size: 1.4rem;
   display: block;
   color: #fff;
   text-align: center;
   line-height: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 30px #fff;
 }
 
 .modal {
