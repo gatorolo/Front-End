@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .container {
+   position: relative;
+    top: 2.8em;
+    height: 80.5vh;
+    width: 95vw;
+    align-items: center;
+    box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
+    transition: .5s;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url('../../../assets/login.jfif');
+    background-position: center;
+    background-size: contain;
+ }
+
+ h3 {
+    font-size: 2.2rem;
+    color: rgb(15, 11, 11);
+    padding: .8rem 0;
+    border: 2px solid #106e9d;
+    border-radius: 10px;
+    
+    
+ }   
+
+ label {
+    font-size: 1.5rem;
+    font-weight: 600;
+ }
+
+ .btn-block {
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+     0 0 20px #fff,
+     0 0 50px #fff;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+    background-color: #14a5ed;
+ }
+
+ .form-check > input {
+   border: 1px solid #14a5ed;
+   width: 3rem;
+   height: 3rem;
+ }

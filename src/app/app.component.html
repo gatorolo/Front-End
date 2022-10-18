@@ -1,9 +1,9 @@
 <header class="container">
     <div class="row">
-      <a href="/">
+      <div class="logo">
         <img class="logo" src="../assets/APLogo-20-20.png" alt="logo">
         <span class="mobile">Mobile</span>
-      </a>
+      </div>
     <nav class="navbar">
       <ul class="">
         <li data-title="Home" ><a class="active" routerLink='/paginas/home'>
@@ -27,7 +27,7 @@
     </nav>
     </div>
 
-    <div>
+
 
       <label for="check" class="checkbtn"><fa-icon [icon]="faBars" aria-hidden="true"></fa-icon></label>
       <input type="checkbox" id="check">
@@ -50,12 +50,11 @@
           <fa-icon [icon]="faPen" aria-hidden="true"></fa-icon>
         </a>
       </li>
-      <li data-title="Login"><a>
+      <li data-title="Login" ><a routerLink='/paginas/login'>
         <fa-icon [icon]="faUser"></fa-icon>
       </a>
       </li>
       </ul>
-    </div>
 </header>
 
 <router-outlet></router-outlet>

@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { StudiesComponent } from './studies/studies.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -17,7 +18,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutComponent,
     SkillsComponent,
     StudiesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

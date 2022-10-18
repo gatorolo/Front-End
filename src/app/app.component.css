@@ -9,32 +9,44 @@ body {
   padding: 0;
 }
 
+.row {
+  flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+     padding-right: 0;
+    padding-left: 0;
+    margin-top: var(--bs-gutter-y);
+}
+
+
 header {
   position: sticky;
   height: 4.8em;
-  width: 99%;
+  width: 100%;
   background-color: #14a5ed;
   z-index: 9999;
 }
-
-.logo {
-  width: 45%;
-  height: 6.4em;
-  margin: -15px 0px 0px 0px;
+.container {
+  padding: 0;
 }
 
-a span {
+.logo {
+  width: 61%;
+  height: 6.5em;
+  margin: -9px 0;
+}
+
+.logo span {
   position: relative;
-  top: -3px;
-  font-size: 1.6em;
+  top: 5px;
+  font-size: 1.8em;
   color: #fff;
   text-decoration: none;
-
 }
 
 .navbar li .active {
   color: #fff;
-  background: rgb(155, 155, 161);
+  background: #14a5ed;
 } 
 
 .navbar ul {
@@ -76,7 +88,7 @@ ul li a {
   right: 15px;
   font-size: 30px;
   border: 2px solid rgb(255, 255, 255);
-  padding: 0px 3px;
+  padding: 0px 5px;
   top: 14px;
   border-radius: 8px;
   cursor: pointer;

@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { StudiesComponent } from './studies/studies.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -17,6 +17,7 @@ const routes: Routes = [
       {path: 'skills', component: SkillsComponent},
       {path: 'studies', component: StudiesComponent},
       {path: 'projects', component: ProjectsComponent},
+      {path: 'login', component: LoginComponent},
 
       {path: '**', redirectTo: 'home'}
 
