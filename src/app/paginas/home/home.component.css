@@ -5,7 +5,7 @@
 .container {
     position: relative;
     top: 2.8em;
-    height: 80.5vh;
+    height: 80vh;
     width: 95vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
@@ -27,7 +27,7 @@
 }
 
 .row {
-  padding: 3em;
+  padding: 1rem;
   align-items: center;
 
 }
@@ -39,9 +39,9 @@
   align-items: center;
   font-size: 1.6em;
   border: 1px solid #fff;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   border-radius: 10px;
-  padding: 12px;
+  padding: 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -58,7 +58,7 @@ h1 {
 
 h1 span {
   transition: .5s linear;
-  font-size: 28px;
+  font-size: 35px;
 }
 
 /*h1:hover span {
@@ -70,6 +70,7 @@ h1 span {
 }*/
 
 h2, h3, h4 {
+  font-size: 28px;
   color: #fff;
   text-shadow: 0 0 10px #fff,
    0 0 20px #fff,
@@ -77,8 +78,7 @@ h2, h3, h4 {
    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 1em;
-  margin-bottom: 1.5em;
+  padding: 1rem;
 }
 
 h4:hover {
@@ -100,7 +100,8 @@ h3:hover {
   position: relative;
   height: 100%;
   max-width: 100%;
-  bottom: 40px;
+  top: 10px;
+  padding-top: 0.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.2);
 }
