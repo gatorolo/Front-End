@@ -1,14 +1,199 @@
 <div class="container">
-
+  <div class="text-center">
+    <button (click)="onOpenModal('add')" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+   <!--<button type="button" class="btn btn-success" (click)="onOpenModal('add')"-->
+      <a class="nav-link" style="color: #fff"
+        >Agregar Educación <span class="sr-only">(current)</span></a
+      > 
+    </button>
+  </div>
   <div class="row row-cols-1 row-cols-sm-12 row-cols-md-12 row-cols-lg-4 row-cols-xl-4">
-    
-    <div class="col"  *ngFor="let studies of studiess">
+
+    <div class="col" *ngFor="let studies of studiess">
       <h1 class="titulo">{{studies.tituloEdu}}</h1>
-       <img src="{{studies.imagenEdu}}">
+      <img src="{{studies.imagenEdu}}">
+
+      <a>
+        <button (click)="onOpenModal('edit', studies)" class="btn btn-warning m-2 tooltips" data-placement="top"
+          data-toggle="tooltip" data-original-title="edit">editar</button>
+      </a>
+      <a>
+        <button (click)="onOpenModal('delete', studies)" class="btn btn-danger m-2" data-placement="top" data-toggle="tooltip"
+          data-original-title="delete">borrar</button>
+      </a>
+
+    </div>
+  </div>
+          <!--*********************-->
+<div
+class="modal fade"
+id="addEducationModal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="addEducationModalLabel"
+aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="addEducationModalLabel">Sumà tu educaciòn </h5>
+          <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="close"
+          >
+        <span aria-hidden="true"> &times;</span>
+        </button>
       </div>
+           
+      <div class="modal-body">
+        <form #addForm="ngForm" (ngSubmit)="onAddEducation(addForm)">
+          <div class="form-group">
+            <label for="tituloEdu">Tu Título</label>
+            <input
+              type="text"
+              ngModel
+              name="tituloEdu"
+              class="form-control"
+              id="tituloEdu"
+              placeholder="Titulo"
+              required
+            />
+         
+          </div>
+          <div class="form-group">
+            <label for="imagenEdu">URL de la imagen</label>
+            <input
+              type="text"
+              ngModel
+              name="imagenEdu"
+              class="form-control"
+              id=" imagenEdu"
+              placeholder="URL de la imagen"
+              required
+            />
+          </div>
+         <div class="modal-footer">
+          <button 
+          type="button"
+          id="add-education-form"
+          class="btn btn-primary"
+          data-dismiss="modal">
+               Cerrar
+          </button>
+          <button
+          [disabled]="addForm.invalid"
+          type="submit"
+          class="btn btn-success"
+          >Guardar</button>
+         </div>
+        </form>
+          
+         
+        </div>
+    </div>
+
   </div>
 </div>
+<!--<div
+  class="modal fade"
+  id="editEducationModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="experienceEditModalLabel"
+  aria-hidden="true"
+>
+</div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateEducationModalLabel">
+          Editar Educación {{ editStudy?.tituloEdu }}
+        </h5>
+      </div>
+      <div class="modal-body">
+        <form #editForm="ngForm">
+          <div class="form-group">
+            <label for="name">Título</label>
+            <input
+              type="text"
+              ngModel="{{ editStudy?.tituloEdu }}"
+              name="titleEdu"
+              class="form-control"
+              id="titleEdu1"
+              aria-describedby="emailHelp"
+              placeholder="Titulo"
+            />
+          </div>
+          
+         
+          
+
+          <div class="form-group">
+            <label for="imagenEdu">URL de imagen</label>
+            <input
+              type="text"
+              ngModel="{{ editStudy?.imagenEdu }}"
+              name="picEdu"
+              class="form-control"
+              id="imagenEdu1"
+              placeholder="URL de imagen"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="1"
+              data-dismiss="modal"
+              class="btn btn-secondary"
+            >
+              Cerrar
+            </button>
+          <button
+              (click)="onUpdateStudy(editForm.value)"
+              data-dismiss="modal"
+              class="btn btn-primary"
+            >
+              Guardar Cambios
+            </button>-
+          </div>
+        </form>
+      </div>
+    </div>-->
 
 
 
-  <p class="text-center m-0 text-muted h4">Gatorolo</p>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nueva Educacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm" (ngSubmit)="onAddEducation(addForm)">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Titulo</label>
+            <input type="text" class="form-control border border-primary" id="recipient-name" placeholder="requerido">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Url del Certificado</label>
+            <input class="form-control border border-primary" id="message-text" placeholder="requerido">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+
+<footer class="bg-white p-2 mt-.5">
+  <p class="text-center mt-5 text-muted h4">Gatorolo</p>
+</footer>

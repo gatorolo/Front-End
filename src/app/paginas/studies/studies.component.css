@@ -4,18 +4,20 @@ body {
 
 .container {
   position: relative;
-    top: 2.8em;
-    height: 80.5vh;
-    width: 95vw;
-    align-items: center;
-    box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    transition: .5s;
-    /*overflow-y: hidden;*/
-    overflow-x: hidden;
-    padding: 10px 0px;
-    background-image: url(../../../assets/EntityFramework-600x300.jpg);
-    background-size: cover;
- }
+  top: 2.8em;
+  height: 80.5vh;
+  width: 95vw;
+  align-items: center;
+  box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
+  background: linear-gradient(10deg, #ececec, #fff);
+  transition: 1s;
+  /*overflow-y: hidden;*/
+  overflow-x: hidden;
+  background-image: url(../../../assets/EntityFramework-600x300.jpg);
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+}
 
  .col {
   padding: 10px;
@@ -37,7 +39,7 @@ h1 {
   text-shadow: 0 0 10px #fff,
    0 0 20px #fff,
    0 0 30px #fff;
-   margin: 0 0 1rem;
+   margin: 0 0 0.5rem;
 }
 
 .modal {

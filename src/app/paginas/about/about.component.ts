@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm , FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-about',

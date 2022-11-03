@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario';
 import { HomeService } from 'src/app/servicios/home.service';
+import { NgForm , FormsModule} from '@angular/forms';
 
 
 

@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Studies} from '../models/studies';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StudiesService {
   private apiServerUrl = environment.apiBaseUrl;
