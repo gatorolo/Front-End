@@ -1,25 +1,24 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgForm , FormsModule} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Studies } from 'src/app/models/studies';
 import { StudiesService } from 'src/app/servicios/studies.service';
 
-  
 
 
 
 
 @Component ({
     selector: 'app-studies',
-    exportAs: 'app-studies',
     templateUrl: './studies.component.html',
     styleUrls: ['./studies.component.css']
 })
 
   export class StudiesComponent implements OnInit {
-   
+  
   public studiess:Studies[]=[];
-  public editStudy:Studies | undefined;
+  public Studies= this.studiesService.getStudies();
+  public editEducation:Studies | undefined;
   public deleteStudy:Studies | undefined;
 
     constructor(private studiesService: StudiesService) { }
@@ -51,7 +50,7 @@ import { StudiesService } from 'src/app/servicios/studies.service';
       this.deleteStudy = studies;
       button.setAttribute('data-target', '#deleteEducationModal');
     } else if (mode === 'edit') {
-      this.editStudy = studies;
+      this.editEducation = studies;
       button.setAttribute('data-target', '#editEducationModal');
     }
 
@@ -74,8 +73,8 @@ public onAddEducation(addForm: NgForm): void {
   });
 }
 
-public onUpdateStudy(studies: Studies){
-  this.editStudy=studies;
+public onUpdateEducation(studies: Studies){
+  this.editEducation=studies;
   document.getElementById('add-education-form')?.click();
   this.studiesService.updateStudies(studies).subscribe({
     next: (Response:Studies) =>{
@@ -90,7 +89,7 @@ public onUpdateStudy(studies: Studies){
   })
 }
 
-public onDeleteStudy(ideEdu:number):void{
+public onDeleteEducation(ideEdu:number):void{
 this.studiesService.deleteStudies(ideEdu).subscribe({
     next: (response:void) =>{
       console.log(Response);

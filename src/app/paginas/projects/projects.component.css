@@ -4,7 +4,7 @@ body {
  .container {
    position: relative;
     top: 2.8em;
-    height: 80.5vh;
+    height: 79vh;
     width: 95vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
@@ -21,7 +21,7 @@ body {
    width: 100%;
    text-align: center;
    color: #fff;
-   height: 27.5vh;
+   height: 27vh;
    padding-top: 18px;}
 
  .container-item .titulo {

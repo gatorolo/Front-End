@@ -11,7 +11,7 @@ import {faAt} from '@fortawesome/free-solid-svg-icons';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {faPen } from '@fortawesome/free-solid-svg-icons';
 import {faUser } from '@fortawesome/free-solid-svg-icons';
-import { Studies } from 'src/app/models/studies';
+
 
 @Component({
   selector: 'app-root',
