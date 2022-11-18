@@ -1,13 +1,13 @@
-<div class="container justify-content-center mb-4" *ngIf="usuario">
+<div class="container justify-content-center mb-4"*ngIf="usuarios" >
    <div class="row">
       <div class="d-flex col-sm-12 col-md-4 col-lg-4 col-xl-4 m-0">
-          <img class="img-fluid mifoto-item" src="{{usuario.fotoPerfil}}" alt="fotoPerfil">
+          <img class="img-fluid mifoto-item" src={{usuarios.fotoPerfil}} alt="fotoPerfil">
       </div>
    
       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 m-auto pt-3 mt-1">
-         <h1 class="nombre"><span>{{usuario.nombre}}</span></h1>
-         <h3>{{usuario.titulo}}</h3>
-         <h4>{{usuario.descripcion}}</h4>
+         <h1 class="nombre"><span>{{usuarios.nombre}}</span></h1>
+         <h3>{{usuarios.titulo}}</h3>
+         <h4>{{usuarios.descripcion}}</h4>
       </div>
 
       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">

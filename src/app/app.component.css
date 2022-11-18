@@ -98,8 +98,8 @@ ul li a {
 .social {
   position: fixed;
   top: 14.3%;
-  width: 43%;
-  height: 79vh;
+  width: 45%;
+  height: 79.3vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -129,7 +129,7 @@ ul li a {
 #check:checked + .social {
   display: block;
   text-align: center;
-  right: 2.2%;
+  right: 2.5%;
   transition: all .6s ease;
 }
 
@@ -164,6 +164,15 @@ ul li a {
   visibility: hidden;
   border-radius: 3px;
   z-index: 1999;
+}
+
+.boton_ingreso {
+  font-size: 20px;
+  font-weight: bold;
+  top: 10%;
+  position: relative;
+  padding:  8%;
+  right: 0;
 }
 
  ul li a:hover {

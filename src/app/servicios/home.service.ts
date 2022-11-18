@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Usuario } from '../models/usuario';
+import { usuarios } from '../models/usuarios';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,11 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-  public getUser():Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
+  public getUser():Observable<usuarios>{
+    return this.http.get<usuarios>(`${this.apiServerUrl}/usuarios/id/1`);
   }
 
-  public updateUsuario(usuario: Usuario):Observable<Usuario>{
-    return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
+  public updateUsuario(usuario: usuarios):Observable<usuarios>{
+    return this.http.put<usuarios>(`${this.apiServerUrl}/usuarios/update`, usuario);
   }
 }

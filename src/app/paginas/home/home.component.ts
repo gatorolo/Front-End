@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/models/usuario';
+import { usuarios } from 'src/app/models/usuarios';
 import { HomeService } from 'src/app/servicios/home.service';
 import { NgForm , FormsModule} from '@angular/forms';
 
@@ -14,20 +14,20 @@ import { NgForm , FormsModule} from '@angular/forms';
 
 
 export class HomeComponent implements OnInit {
-    public usuario : Usuario | undefined;
-    public editUsuario : Usuario | undefined;
+    public usuarios : usuarios | undefined;
+    public editUsuario : usuarios | undefined;
 
-    constructor(private homeService : HomeService ) { }
+    constructor(private homeService: HomeService ) { }
 
     
   ngOnInit(): void {
-    this.getUser();
+   this.getUser();
   }
 
-  public getUser():void {
+ public getUser():void {
      this.homeService.getUser().subscribe({
-      next: (Response: Usuario) => {
-        this.usuario = Response;
+      next: (Response: usuarios) => {
+        this.usuarios = Response;
       },
       error:(error:HttpErrorResponse) => {
       alert(error.message);

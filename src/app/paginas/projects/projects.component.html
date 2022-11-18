@@ -1,19 +1,276 @@
 <div class="container">
-    <div class="row">
-      <div class="container-item col-xs-12 col-sm-12 col-md-3 col-lg-4 col-xl-4">
-        <p class="titulo">www.planetadocumentado.com.ar</p>
-       <img src="../../../assets/planeta documentado_jpg.jpg" alt="proyecto-1">
-       <span>(2009 - 2012) hecho con dreamweaver 8</span>
+
+  <div class="main-container m-0">
+  
+    <div class="text-center mt-2">
+      <button
+        type="button" 
+        class="btn btn-success"
+        (click)="onOpenModal('add')">
+        <a class="nav-link fs-4" style="color: #fff"
+        > Agregar Experiencia <span class="sr-only">(current)</span></a>
+      </button>
+    </div>
+        
+    <div id="main-container">
+      <div  *ngFor="let experiencia of experiencias">
+       
+          <div class="row text-center">
+            <div class="row mt-1">
+              <h1>{{ experiencia.tituloExp }}</h1> 
+            </div>
+            <div class="row"> 
+              <img  src="{{experiencia.imgExp }}"  alt="imagen experiencia">
+            </div>
+            <div class="row"> 
+              <span alt="descripcion experiencia">{{experiencia.descExp }}</span>  
+            </div>
+       
+            <div class="col text-center">
+              <a
+                (click)="onOpenModal('edit', experiencia)"
+                class="btn btn-warning mx-4 boton"
+                style="font-weight: bold"
+                data-placement="top"
+                data-toggle="tooltip"
+                data-original-title="edit"
+              >editar</a>
+        
+              <a
+                (click)="onOpenModal('delete', experiencia)"
+                class="btn btn-danger m-2 boton"
+                style="font-weight: bold"
+                data-placement="top"
+                data-toggle="tooltip"
+                data-original-title="delete"
+              >borrar</a>
+            </div>
+          </div>
+        
       </div>
-      <div class="container-item col-xs-12 col-sm-12 col-md-3 col-lg-4 col-xl-4">
-        <p class="titulo"> www.cunadeluna.com.ar</p>
-       <img src="../../../assets/ninive.png" alt="proyecto-2">
-       <span>(2010 - 2013) hecho con dreamweaver 8</span>
+    </div>
+      
+             <!--Add Modal-->
+        
+      <div
+      class="modal fade"
+      id="addExperienciaModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="addExperienciaModalLabel"
+      aria-hidden="true"
+      >
+     <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header alAbrir">
+          <h2 class="modal-title text-dark" id="addExperienciaModalLabel"><b>Sumà tu Experiencia</b> </h2>
+        </div>
+  
+        <div class="modal-body">
+          <form #addForm="ngForm" (ngSubmit)="onAddExperiencia(addForm)">
+
+            <div class="form-group text-center">
+              <label for="tituloExp" class="h3"><b>Sumà un Título</b> </label>
+              <input
+                type="text"
+                style="font-weight: bold"
+                ngModel
+                name="tituloExp"
+                class="form-control text-center fs-3"
+                id="tituloExp"
+                placeholder="Titulo"
+                required
+              />
+  
+            </div>
+  
+            <div class="form-group text-center">
+              <label for="imgExp" class="h3"><b>URL de la imagen</b> </label>
+              <input
+                type="text"
+                style="font-weight: bold"
+                ngModel
+                name="imgExp"
+                class="form-control text-center fs-3"
+                id=" imgExp"
+                placeholder="URL"
+                required
+              />
+            </div>
+
+            <div class="form-group text-center">
+              <label for="descExp" class="h3"><b>Sumà una descripciòn</b></label>
+              <input
+                type="text"
+                style="font-weight: bold"
+                ngModel
+                name="descExp"
+                class="form-control text-center fs-3"
+                id="descExp"
+                placeholder="descripcion"
+                required
+              />
+            </div>
+  
+            <div class="modal-footer">
+              <button
+                type="button"
+                id="add-experiencia-form"
+                class="btn btn-secondary fs-3"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                [disabled]="addForm.invalid"
+                type="submit"
+                class="btn btn-success fs-3"
+              >
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="container-item col-xs-12 col-sm-12 col-md-3 col-lg-4 col-xl-4">
-        <p class="titulo">www.ninive.ar</p>
-       <img src="../../../assets/ninive.png" alt="proyecto-3">
-       <span>Hecho con ide en junio de 2021</span>
+      </div>
+     </div>
+     
+  
+          <!--Edit Modal-->
+        
+         <div
+            class="modal fade"
+            id="editExperienciaModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="ExperienciaEditModalLabel"
+            aria-hidden="true"
+          >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header alAbrir text-center">
+                <h3 class="modal-title text-dark" id="updateExperienciaModalLabel">
+                  <b>Edità tu experiencia:</b> {{editExperiencia?.tituloExp}}
+                </h3>
+              </div>
+        
+              <div class="modal-body">
+                <form #editForm="ngForm" >
+                  <div class="form-group text-center">
+                    <label for="name" style="font-weight: bold" class="h3"><b>Tu Experiencia aquì</b></label>
+                    <input
+                      type="text"
+                      style="font-weight: bold"
+                      ngModel="{{editExperiencia?.tituloExp}}"
+                      name="tituloExp"
+                      class="form-control text-center fs-4"
+                      id="tituloExp"
+                      aria-labelledby="emailHelp"
+                      placeholder="Titulo"
+                    />
+                  </div>
+                  <input
+                      type="hidden"
+                      ngModel="{{editExperiencia?.idExp}}"
+                      name="idExp"
+                      class="form-control text-center"
+                      id="idExp"
+                      aria-labelledby="emailHelp"
+                      placeholder=""
+                    />
+                    
+                    <div class="form-group text-center">
+                    <label for="imgExp" style="font-weight: bold" class="h3"><b>URL de la imagen</b> </label>
+                    <input
+                      type="text"
+                      style="font-weight: bold"
+                      ngModel="{{editExperiencia?.imgExp}}"
+                      name="imgExp"
+                      class="form-control text-center fs-4"
+                      id="imgExp"
+                      placeholder="URL de la imagen"
+                    />
+                  </div>
+                  <div class="form-group text-center">
+                    <label for="imgExp" style="font-weight: bold" class="h3"><b>Sumà tu descripciòn</b></label>
+                    <input
+                      type="text"
+                      style="font-weight: bold"
+                      ngModel="{{editExperiencia?.descExp}}"
+                      name="descExp"
+                      class="form-control text-center fs-4"
+                      id="descExp"
+                      placeholder="descripciòn"
+                    />
+                  </div>
+  
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      id=""
+                      class="btn btn-secondary fs-3"
+                      data-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+  
+                    <button
+                    (click)="onUpdateExperiencia(editForm.value)"
+                    data-dismiss="modal"
+                    class="btn btn-success fs-3"
+                    >
+                    Guardar
+                    </button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+                  <!--Delete Modal-->
+  
+        <div
+        data-bs-toggle="modal" data-bs-target="#deleteModalLabel"
+        class="modal fade"
+        id="deleteExperienciaModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="deleteModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog text-center" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center alAbrir">
+              <h3 class="modal-title text-dark" id="deleteModalLabel"><b>Borrar Educaciòn</b> </h3>
+            </div>
+  
+            <div class="moda-body mt-5">
+              <p class="h4">
+                <b>Estas seguro de borrar?</b> 
+                {{deleteExperiencia?.tituloExp}}
+              </p>
+              <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-secondary btn-lg mx-4 fs-3"
+                data-dismiss="modal"
+                >
+                   no
+                </button>
+                <button
+                (click)="onDeleteExperiencia(deleteExperiencia!.idExp)"
+                 class="btn btn-danger btn-lg fs-3"
+                 data-dismiss="modal"
+                >Si
+              </button>
+                 
+              
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
  </div>

@@ -1,4 +1,5 @@
 <div class="container">
+
 <div class="main-container m-0">
   
   <div class="text-center mt-2">
@@ -6,7 +7,7 @@
       type="button" 
       class="btn btn-success"
       (click)="onOpenModal('add')">
-      <a class="nav-link" style="color: #fff"
+      <a class="nav-link fs-4" style="color: #fff"
       > Agregar Educación <span class="sr-only">(current)</span></a>
     </button>
   </div>
@@ -15,7 +16,7 @@
     <div  *ngFor="let studies of studiess">
       <div>
         <div class="row text-center">
-          <div class="row">
+          <div class="row mt-1">
             <h1>{{ studies.tituloEdu }}</h1> 
           </div>
           <div class="row"> 
@@ -25,7 +26,8 @@
           <div class="col text-center">
             <a
               (click)="onOpenModal('edit', studies)"
-              class="btn btn-warning mx-4"
+              class="btn btn-warning mx-4 boton"
+              style="font-weight: bold"
               data-placement="top"
               data-toggle="tooltip"
               data-original-title="edit"
@@ -34,6 +36,7 @@
             <a
               (click)="onOpenModal('delete', studies)"
               class="btn btn-danger m-2"
+              style="font-weight: bold"
               data-placement="top"
               data-toggle="tooltip"
               data-original-title="delete"
@@ -69,7 +72,7 @@
               style="font-weight: bold"
               ngModel
               name="tituloEdu"
-              class="form-control text-center"
+              class="form-control text-center fs-3"
               id="tituloEdu"
               placeholder="Titulo"
               required
@@ -84,9 +87,9 @@
               style="font-weight: bold"
               ngModel
               name="imagenEdu"
-              class="form-control text-center"
+              class="form-control text-center fs-3"
               id=" imagenEdu"
-              placeholder=" URL de la imagen"
+              placeholder="URL"
               required
             />
           </div>
@@ -95,7 +98,7 @@
             <button
               type="button"
               id="add-education-form"
-              class="btn btn-secondary"
+              class="btn btn-secondary fs-3"
               data-dismiss="modal"
             >
               Cerrar
@@ -103,7 +106,7 @@
             <button
               [disabled]="addForm.invalid"
               type="submit"
-              class="btn btn-success"
+              class="btn btn-success fs-3"
             >
               Guardar
             </button>
@@ -117,7 +120,7 @@
 
         <!--Edit Modal-->
       
-        <div
+       <div
           class="modal fade"
           id="editEducationModal"
           tabindex="-1"
@@ -142,7 +145,7 @@
                     style="font-weight: bold"
                     ngModel="{{editEducation?.tituloEdu}}"
                     name="tituloEdu"
-                    class="form-control text-center"
+                    class="form-control text-center fs-4"
                     id="tituloEdu"
                     aria-labelledby="emailHelp"
                     placeholder="Titulo"
@@ -165,7 +168,7 @@
                     style="font-weight: bold"
                     ngModel="{{editEducation?.imagenEdu}}"
                     name="imagenEdu"
-                    class="form-control text-center"
+                    class="form-control text-center fs-4"
                     id="imagenEdu"
                     placeholder="URL de la imagen"
                   />
@@ -175,7 +178,7 @@
                   <button
                     type="button"
                     id=""
-                    class="btn btn-secondary"
+                    class="btn btn-secondary fs-3"
                     data-dismiss="modal"
                   >
                     Cerrar
@@ -184,7 +187,7 @@
                   <button
                   (click)="onUpdateEducation(editForm.value)"
                   data-dismiss="modal"
-                  class="btn btn-success"
+                  class="btn btn-success fs-3"
                   >
                   Guardar
                   </button>
@@ -203,32 +206,33 @@
       id="deleteEducationModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="deleteModelLabel"
+      aria-labelledby="deleteModalLabel"
       aria-hidden="true"
       >
       <div class="modal-dialog text-center" role="document">
         <div class="modal-content">
           <div class="modal-header text-center alAbrir">
-            <h3 class="modal-title text-dark" id="deleteModelLabel"><b>Borrar Educaciòn</b> </h3>
+            <h3 class="modal-title text-dark" id="deleteModalLabel"><b>Borrar Educaciòn</b> </h3>
           </div>
 
           <div class="moda-body mt-5">
             <p class="h4">
-              <b>Estas por borrar la educaciòn:</b> 
+              <b>Estas seguro de borrar?</b> 
               {{deleteStudy?.tituloEdu}}
             </p>
             <div class="modal-footer">
               <button
               type="button"
-              class="btn btn-secondary btn-lg mx-4"
+              class="btn btn-secondary btn-lg mx-4 fs-3"
               data-dismiss="modal"
               >
                  no
               </button>
               <button
                (click)="onDeleteEducation(deleteStudy!.idEdu)"
-               class="btn btn-danger btn-lg"
+               class="btn btn-danger btn-lg fs-3"
                data-dismiss="modal"
+               
               >
                Si
             </button>

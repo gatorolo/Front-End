@@ -9,7 +9,6 @@ body {
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
     transition: .5s;
-    overflow-y: hidden;
     overflow-x: hidden;
     background-image: url(../../../assets/entity.jfif);
     background-position: center;
@@ -22,29 +21,62 @@ body {
    text-align: center;
    color: #fff;
    height: 27vh;
-   padding-top: 18px;}
+   padding-top: 1px;
+   margin: 40px 0;
+  }
 
- .container-item .titulo {
-   font-size: 1.3em;
+ h1 {
+   font-size: 1.7rem;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
    background-color: rgba(0, 0, 0, 0.6);
    color: #fff;
    text-shadow: 0 0 10px #fff,
     0 0 20px #fff,
     0 0 50px #fff;
+    margin-top: 0.5rem;
  }
 
- .container-item span {
-   font-size: 1.1rem;
+  span {
+   font-size: 1.5rem;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
    background-color: rgba(0, 0, 0, 0.6);
+   color: #fff;
+   text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 50px #fff;
+    margin-top: 10px;
  }
 
- .container-item img {
+ 
+ img {
    display: block;
-   width: 60%;
-   margin: -10px auto;
+   width: 90%;
+   margin: -10px 9%;
+   padding-top: 0.5rem;
+  }
+  
+  img:hover {
+   transform: scale(1.4);
  }
+
+ .modal {
+  z-index: 99999;
+}
+
+.modal-body img {
+  transform: scale(1.4);
+  transition: all .4s ease;
+}
+
+.alAbrir {
+  box-shadow: 10px 3px 50px rgba(0, 0, 0, 1);
+  background-color: rgba(20, 165, 237, 0.1);
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 30px #fff;
+   margin: 0 0 0.5rem;
+}
 
  .container-item:hover {
    transform: scale(1.12);

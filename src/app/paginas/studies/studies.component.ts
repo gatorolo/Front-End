@@ -104,3 +104,5 @@ this.studiesService.deleteStudies(ideEdu).subscribe({
 }
 
 }
+
+

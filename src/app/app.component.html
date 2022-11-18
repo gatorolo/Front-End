@@ -49,15 +49,30 @@
             <fa-icon [icon]="faLinkedinIn" aria-hidden="true"></fa-icon>
           </a>
         </li>
-        <!--<li data-title="Edit"><a routerLink='/paginas/login'>
+        
+        
+        <li data-title="Edit"><a routerLink='/paginas/login'>
           <fa-icon [icon]="faPen" aria-hidden="true"></fa-icon>
         </a>
-      </li>--><br><br>
-      <li data-title="Login" ><a routerLink='/paginas/login'>
+      </li>
+
+      <!--<li data-title="Login" ><a routerLink='#' (click)="login()" *ngIf="!isLogged">
         <fa-icon [icon]="faUser"></fa-icon>
       </a>
-      </li>
+    </li>-->
+    
+      <button type="button" class="btn btn-outline-light boton_ingreso" (click)="login()">
+        Login
+        </button>
+        <button type="button" class="btn btn-outline-light boton_ingreso" (click)="onLogOut()">
+         salir
+         </button>
       </ul>
 </header>
+<script>
+  document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
+      document.cookie = 'same-site-cookie=foo; SameSite=Lax'; 
+</script>
+
 
 <router-outlet></router-outlet>
