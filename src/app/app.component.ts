@@ -13,6 +13,10 @@ import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {faPen } from '@fortawesome/free-solid-svg-icons';
 import {faUser } from '@fortawesome/free-solid-svg-icons';
 import {faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import {faUserSlash } from '@fortawesome/free-solid-svg-icons';
+import { LoginUsuario } from './models/login-usuario';
+import { AuthService } from './servicios/auth.service';
+
 import { TokenService } from './servicios/token.service';
 
 
@@ -40,12 +44,19 @@ export class AppComponent {
   faBars = faBars;
   faPen = faPen;
   faUser = faUser;
-  faArrowRightToBracket = faArrowRightToBracket
+  faArrowRightToBracket = faArrowRightToBracket;
+  faUserSlash = faUserSlash
 
   isLogged = false;
+  isloggingFail = true;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password!: string;
+  roles: string[] = [];
+  errMsj!: string;
   
 
-  constructor(private router:Router, private tokenService: TokenService){}
+  constructor(private router:Router, private tokenService: TokenService, private authService: AuthService){}
 
   ngOninit():void{
     if(this.tokenService.getToken()){
@@ -55,6 +66,25 @@ export class AppComponent {
     }
   }
 
+  onLogin(): void {
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+     this.authService
+      .login(this.loginUsuario).subscribe( data => {
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        this.router.navigate(['']);
+        this.isLogged = true;
+        this.isloggingFail = false;
+      }, error =>{
+        this.isLogged= false;
+        this.isloggingFail = true;
+        this.errMsj = error.error.mensaje;
+      
+      })
+  }
+
   onLogOut():void {
     this.tokenService.logOut();
     window.location.reload();
@@ -62,5 +92,6 @@ export class AppComponent {
 
   login(){
     this.router.navigate(['/paginas/login']);
+    this.isLogged = true;
   }
 }

@@ -49,24 +49,22 @@
             <fa-icon [icon]="faLinkedinIn" aria-hidden="true"></fa-icon>
           </a>
         </li>
+        <br>
         
         
-        <li data-title="Edit"><a routerLink='/paginas/login'>
+        <!--<li data-title="Edit"><a routerLink='/paginas/login'>
           <fa-icon [icon]="faPen" aria-hidden="true"></fa-icon>
         </a>
-      </li>
+      </li>-->
 
-      <!--<li data-title="Login" ><a routerLink='#' (click)="login()" *ngIf="!isLogged">
+      <li data-title="Login" ><a routerLink='#' (click)="login()" *ngIf="!isLogged">
         <fa-icon [icon]="faUser"></fa-icon>
       </a>
-    </li>-->
-    
-      <button type="button" class="btn btn-outline-light boton_ingreso" (click)="login()">
-        Login
-        </button>
-        <button type="button" class="btn btn-outline-light boton_ingreso" (click)="onLogOut()">
-         salir
-         </button>
+    </li>
+    <li data-title="Login" ><a routerLink='#' (click)=" onLogOut()" *ngIf="isLogged">
+      <fa-icon [icon]="faUserSlash"></fa-icon>
+    </a>
+  </li>
       </ul>
 </header>
 <script>

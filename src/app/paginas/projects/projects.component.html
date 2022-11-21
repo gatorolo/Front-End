@@ -5,10 +5,10 @@
     <div class="text-center mt-2">
       <button
         type="button" 
-        class="btn btn-success"
-        (click)="onOpenModal('add')">
+        class="btn btn-success display-2"
+        (click)="onOpenModal('add')" *ngIf="islogged">
         <a class="nav-link fs-4" style="color: #fff"
-        > Agregar Experiencia <span class="sr-only">(current)</span></a>
+        > Add Project <span class="sr-only">(current)</span></a>
       </button>
     </div>
         
@@ -34,16 +34,18 @@
                 data-placement="top"
                 data-toggle="tooltip"
                 data-original-title="edit"
-              >editar</a>
+                *ngIf="islogged"
+              >edit</a>
         
               <a
                 (click)="onOpenModal('delete', experiencia)"
-                class="btn btn-danger m-2 boton"
+                class="btn btn-danger"
                 style="font-weight: bold"
                 data-placement="top"
                 data-toggle="tooltip"
                 data-original-title="delete"
-              >borrar</a>
+                *ngIf="islogged"
+              >delete</a>
             </div>
           </div>
         
@@ -119,14 +121,14 @@
                 class="btn btn-secondary fs-3"
                 data-dismiss="modal"
               >
-                Cerrar
+                Close
               </button>
               <button
                 [disabled]="addForm.invalid"
                 type="submit"
                 class="btn btn-success fs-3"
               >
-                Guardar
+                Save
               </button>
             </div>
           </form>
@@ -212,7 +214,7 @@
                       class="btn btn-secondary fs-3"
                       data-dismiss="modal"
                     >
-                      Cerrar
+                      Close
                     </button>
   
                     <button
@@ -220,7 +222,7 @@
                     data-dismiss="modal"
                     class="btn btn-success fs-3"
                     >
-                    Guardar
+                    Save
                     </button>
                     </div>
                 </form>
@@ -257,13 +259,13 @@
                 class="btn btn-secondary btn-lg mx-4 fs-3"
                 data-dismiss="modal"
                 >
-                   no
+                   No
                 </button>
                 <button
                 (click)="onDeleteExperiencia(deleteExperiencia!.idExp)"
                  class="btn btn-danger btn-lg fs-3"
                  data-dismiss="modal"
-                >Si
+                >Yes
               </button>
                  
               

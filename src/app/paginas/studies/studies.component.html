@@ -5,16 +5,16 @@
   <div class="text-center mt-2">
     <button
       type="button" 
-      class="btn btn-success"
-      (click)="onOpenModal('add')">
+      class="btn btn-success display-2"
+      (click)="onOpenModal('add')"  *ngIf="islogged">
       <a class="nav-link fs-4" style="color: #fff"
-      > Agregar Educación <span class="sr-only">(current)</span></a>
+      > Add Studies<span class="sr-only">(current)</span></a>
     </button>
   </div>
       
   <div id="main-container">
     <div  *ngFor="let studies of studiess">
-      <div>
+      
         <div class="row text-center">
           <div class="row mt-1">
             <h1>{{ studies.tituloEdu }}</h1> 
@@ -22,28 +22,30 @@
           <div class="row"> 
             <img  src="{{studies.imagenEdu }}"  alt="imagen educaciòn">
           </div>
-     
+        
           <div class="col text-center">
             <a
               (click)="onOpenModal('edit', studies)"
-              class="btn btn-warning mx-4 boton"
+              class="btn btn-warning btn-edit mx-4 boton"
               style="font-weight: bold"
               data-placement="top"
               data-toggle="tooltip"
               data-original-title="edit"
-            >editar</a>
+              *ngIf="islogged"
+            >edit</a>
       
             <a
               (click)="onOpenModal('delete', studies)"
-              class="btn btn-danger m-2"
+              class="btn btn-danger btn-delete"
               style="font-weight: bold"
               data-placement="top"
               data-toggle="tooltip"
               data-original-title="delete"
-            >borrar</a>
+              *ngIf="islogged"
+            >delete</a>
           </div>
         </div>
-      </div>
+      
     </div>
   </div>
     
@@ -101,14 +103,14 @@
               class="btn btn-secondary fs-3"
               data-dismiss="modal"
             >
-              Cerrar
+              Close
             </button>
             <button
               [disabled]="addForm.invalid"
               type="submit"
               class="btn btn-success fs-3"
             >
-              Guardar
+              Save
             </button>
           </div>
         </form>
@@ -181,7 +183,7 @@
                     class="btn btn-secondary fs-3"
                     data-dismiss="modal"
                   >
-                    Cerrar
+                    Close
                   </button>
 
                   <button
@@ -189,7 +191,7 @@
                   data-dismiss="modal"
                   class="btn btn-success fs-3"
                   >
-                  Guardar
+                  Save
                   </button>
                   </div>
               </form>
@@ -226,7 +228,7 @@
               class="btn btn-secondary btn-lg mx-4 fs-3"
               data-dismiss="modal"
               >
-                 no
+                 No
               </button>
               <button
                (click)="onDeleteEducation(deleteStudy!.idEdu)"
@@ -234,7 +236,7 @@
                data-dismiss="modal"
                
               >
-               Si
+               Yes
             </button>
             </div>
           </div>
