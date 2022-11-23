@@ -1,4 +1,4 @@
-export interface usuarios{
+export interface Usuarios{
     id:number;
     nombre:string;
     titulo:string;

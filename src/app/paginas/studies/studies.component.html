@@ -5,9 +5,9 @@
   <div class="text-center mt-2">
     <button
       type="button" 
-      class="btn btn-success display-2"
+      class="btn btn-success display-2 text-center"
       (click)="onOpenModal('add')"  *ngIf="islogged">
-      <a class="nav-link fs-4" style="color: #fff"
+      <a class="nav-link fs-4 mx-5" style="color: #fff"
       > Add Studies<span class="sr-only">(current)</span></a>
     </button>
   </div>
@@ -232,9 +232,8 @@
               </button>
               <button
                (click)="onDeleteEducation(deleteStudy!.idEdu)"
-               class="btn btn-danger btn-lg fs-3"
+               class="btn btn-danger btn-lg my-4 fs-3"
                data-dismiss="modal"
-               
               >
                Yes
             </button>

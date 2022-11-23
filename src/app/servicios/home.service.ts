@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { usuarios } from '../models/usuarios';
+import { Usuarios } from '../models/usuarios';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,19 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-  public getUser():Observable<usuarios>{
-    return this.http.get<usuarios>(`${this.apiServerUrl}/usuarios/id/1`);
+  public getUsuarios():Observable<Usuarios>{
+    return this.http.get<Usuarios>(`${this.apiServerUrl}/usuarios/id/1`);
   }
 
-  public updateUsuario(usuario: usuarios):Observable<usuarios>{
-    return this.http.put<usuarios>(`${this.apiServerUrl}/usuarios/update`, usuario);
+  public addUsuarios(usuarios: Usuarios):Observable<Usuarios>{
+    return this.http.post<Usuarios>(`${this.apiServerUrl}/usuarios/add`, usuarios);
+  }
+
+  public updateUsuarios(usuarios: Usuarios):Observable<Usuarios>{
+    return this.http.put<Usuarios>(`${this.apiServerUrl}/usuarios/update`, usuarios);
+  }
+
+  public deleteUsuarios(usuariosId: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/usuarios/delete/${usuariosId}`);
   }
 }

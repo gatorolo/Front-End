@@ -19,12 +19,11 @@
     background-position: center;
 }
 
-.mifoto-item {
-  margin: auto;
-  width: 90%;
+.perfil {
+  margin-left: 3%;
+  width: 100%;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 7%;
 }
 
 .row {
@@ -33,33 +32,22 @@
 
 }
 
-
-.nombre {
+h1 {
   display: block;
   text-align: center;
-  align-items: center;
   border: 1px solid #fff;
-  margin: 0.7rem -4px;
-  border-radius: 10px;
-  padding:3px 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-h1 {
-  font-size: 1.6rem;
+  font-size: 2.1rem;
   color: #fff;
   text-shadow: 0 0 10px #fff,
    0 0 20px #fff,
    0 0 50px #fff;
   text-align: center;
-  padding: 0.5rem;
+  margin: 0rem 8px;
+  padding:3px 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-h1 span {
-  transition: .5s linear;
-  font-size: 35px;
-}
 
 /*h1:hover span {
   color: #fff;
@@ -69,16 +57,17 @@ h1 span {
    cursor: context-menu;
 }*/
 
-h2, h3, h4 {
+h3, h4 {
   font-size: 28px;
   color: #fff;
   text-shadow: 0 0 10px #fff,
    0 0 20px #fff,
    0 0 50px #fff;
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 1rem;
+  margin: -5px 0.6rem;
+  padding: 1rem 1.5rem;
 }
 
 h4:hover {
@@ -96,21 +85,29 @@ h3:hover {
    0 0 50px #fff;
 }
 
+.modal {
+  z-index: 99999;
+}
+
+.btn-change {
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
+}
+
 .inti {
   position: relative;
   height: 100%;
   max-width: 100%;
-  top: 10px;
-  padding-top: 0.5rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 0.2);
+  top: -25px;
+  margin: 0 -0.2rem;
 }
 
 .mifoto {
   animation: movimiento 180s linear infinite;
 }
 
-@keyframes movimiento {
+/*@keyframes movimiento {
   0% {
     transform: translateY(0);
   }
@@ -120,5 +117,5 @@ h3:hover {
   100% {
     transform: translateY(0);
   }
-}
+}*/
 

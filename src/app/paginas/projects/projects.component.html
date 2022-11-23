@@ -5,9 +5,9 @@
     <div class="text-center mt-2">
       <button
         type="button" 
-        class="btn btn-success display-2"
+        class="btn btn-success display-2 text-center"
         (click)="onOpenModal('add')" *ngIf="islogged">
-        <a class="nav-link fs-4" style="color: #fff"
+        <a class="nav-link fs-4 mx-5" style="color: #fff"
         > Add Project <span class="sr-only">(current)</span></a>
       </button>
     </div>
@@ -29,7 +29,7 @@
             <div class="col text-center">
               <a
                 (click)="onOpenModal('edit', experiencia)"
-                class="btn btn-warning mx-4 boton"
+                class="btn btn-warning mx-4 btn-change"
                 style="font-weight: bold"
                 data-placement="top"
                 data-toggle="tooltip"
@@ -39,7 +39,7 @@
         
               <a
                 (click)="onOpenModal('delete', experiencia)"
-                class="btn btn-danger"
+                class="btn btn-danger btn-change"
                 style="font-weight: bold"
                 data-placement="top"
                 data-toggle="tooltip"
