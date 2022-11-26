@@ -19,18 +19,6 @@
 </div>-->
 
 <div class="container">
-
-   <div class="main-container m-0">
-   
-    <!-- <div class="text-center mt-2">
-       <button
-         type="button" 
-         class="btn btn-success display-2 text-center"
-         (click)="onOpenModal('add')" *ngIf="islogged">
-         <a class="nav-link fs-4 mx-5" style="color: #fff"
-         > Add Project <span class="sr-only">(current)</span></a>
-       </button>
-     </div>-->
          
      <div id="main-container">
        <div  *ngIf="usuario">
@@ -81,7 +69,7 @@
  
                <div class="modal-header  text-center">
                  <h2 class="modal-title" id="updateUsuariosModalLabel">
-                   <b>Edità tu Usuario:</b> {{editUsuarios?.nombre}}
+                   <b>Edità tu Usuario</b> 
                  </h2>
                </div>
          
@@ -111,7 +99,7 @@
                        aria-labelledby="emailHelp"
                        placeholder=""
                      />
-                     
+                     <br>
                      <div class="form-group text-center">
                      <label for="fotoPerfil" style="font-weight: bold" class="h3"><b>URL de la imagen</b> </label>
                      <input
@@ -124,8 +112,8 @@
                        placeholder="URL de la imagen"
                      />
                    </div>
-
-                   <div class="form-group text-center">
+                   <br>
+                  <div class="form-group text-center">
                      <label for="titulo" style="font-weight: bold" class="h3"><b>Tu Tìtulo</b></label>
                      <input
                        type="text"
@@ -138,9 +126,9 @@
                        placeholder="Titulo"
                      />
                    </div>
-
+                   <br>
                    <div class="form-group text-center">
-                     <label for="descripcion" style="font-weight: bold" class="h3"><b>Sumà tu descripciòn</b></label>
+                     <label for="descripcion" style="font-weight: bold" class="h3"><b>Algo sobre vos</b></label>
                      <input
                        type="text"
                        style="font-weight: bold"
@@ -219,7 +207,6 @@
            </div>
          </div>
        </div>
-     </div>
      <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
       <div>
          <img class="inti" src="../../../assets/LogosInti.png" alt="">
