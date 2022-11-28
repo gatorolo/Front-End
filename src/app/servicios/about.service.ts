@@ -13,8 +13,8 @@ export class AboutService {
 
   constructor(private http: HttpClient) {}
 
-  public getAbout(): Observable<About> {
-    return this.http.get<About>(`${this.apiServerUrl}/about/id/1`);
+  public getAbout(): Observable<About[]> {
+    return this.http.get<About[]>(`${this.apiServerUrl}/about/all`);
   }
 
   public addAbout(about: About):Observable<About>{

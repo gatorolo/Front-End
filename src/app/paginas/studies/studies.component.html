@@ -32,7 +32,7 @@
               data-toggle="tooltip"
               data-original-title="edit"
               *ngIf="islogged"
-            >edit</a>
+            ><fa-icon [icon]="faPen" aria-hidden="true" class="fa-xl"></fa-icon></a>
       
             <a
               (click)="onOpenModal('delete', studies)"
@@ -42,7 +42,7 @@
               data-toggle="tooltip"
               data-original-title="delete"
               *ngIf="islogged"
-            >delete</a>
+            ><fa-icon [icon]="faTrash" aria-hidden="true" class="fa-xl"></fa-icon></a>
           </div>
         </div>
       

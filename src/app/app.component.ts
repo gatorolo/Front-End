@@ -1,23 +1,22 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faHome, faL } from '@fortawesome/free-solid-svg-icons';
+import {faHome} from '@fortawesome/free-solid-svg-icons';
 import {faAddressCard} from '@fortawesome/free-solid-svg-icons';
 import {faGears} from '@fortawesome/free-solid-svg-icons';
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
 import {faAt} from '@fortawesome/free-solid-svg-icons';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {faPen } from '@fortawesome/free-solid-svg-icons';
-import {faUser } from '@fortawesome/free-solid-svg-icons';
+import {faPen} from '@fortawesome/free-solid-svg-icons';
+import {faUser} from '@fortawesome/free-solid-svg-icons';
 import {faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import {faUserSlash } from '@fortawesome/free-solid-svg-icons';
-import { LoginUsuario } from './models/login-usuario';
-import { AuthService } from './servicios/auth.service';
-
-import { TokenService } from './servicios/token.service';
+import {LoginUsuario } from './models/login-usuario';
+import {AuthService } from './servicios/auth.service';
+import {TokenService } from './servicios/token.service';
 
 
 
@@ -64,6 +63,10 @@ export class AppComponent {
     }else {
       this.isLogged = false;
     }
+  }
+
+  public irA():void {
+    alert("Para editar debes loguearte")
   }
 
   onLogin(): void {

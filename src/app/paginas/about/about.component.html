@@ -1,17 +1,22 @@
 <div class="container">
   <div id="main-container">
-    <div *ngIf="about">
-
+    <div *ngFor="let about of abouts">
       <div class="row text-center">
-
         <div class="row">
-          <p class="parrafo">{{ about.sobreMi }} </p>
+          <p class="parrafo">{{ about.sobreMi }}</p>
         </div>
 
-
         <div class="col text-center">
-          <a (click)="onOpenModal('edit', about)" class="btn btn-warning mx-4 btn-change" style="font-weight: bold"
-            data-placement="top" data-toggle="tooltip" data-original-title="edit" *ngIf="islogged">edit</a>
+          <a
+            (click)="onOpenModal('edit', about)"
+            class="btn btn-warning mx-4 btn-change"
+            style="font-weight: bold"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="edit"
+            *ngIf="islogged"
+            ><fa-icon [icon]="faPen" aria-hidden="true" class="fa-xl"></fa-icon
+          ></a>
         </div>
       </div>
     </div>
@@ -19,12 +24,17 @@
 
   <!--Edit Modal-->
 
-  <div class="modal fade" id="editAboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutEditModalLabel"
-    aria-hidden="true">
+  <div
+    class="modal fade"
+    id="editAboutModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="aboutEditModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-
-        <div class="modal-header  text-center">
+        <div class="modal-header text-center">
           <h2 class="modal-title" id="updateAboutModalLabel">
             <b>Edità tu descripciòn</b>
           </h2>
@@ -32,24 +42,50 @@
 
         <div class="modal-body">
           <form #editForm="ngForm">
-            <input type="hidden" ngModel="{{editAbout?.idAb}}" name="id" class="form-control text-center" id="id"
-              aria-labelledby="emailHelp" placeholder="" />
-            <br>
-          
+            <input
+              type="hidden"
+              ngModel="{{ editAbout?.idAb }}"
+              name="idAb"
+              class="form-control text-center"
+              id="idAb"
+              aria-labelledby="emailHelp"
+              placeholder=""
+            />
+            <br />
+
             <div class="form-group text-center">
-              <label for="titulo" style="font-weight: bold" class="h3"><b>Tu descripciòn Aquì</b></label>
-              <br>
-              <input type="text" style="font-weight: bold" ngModel="{{editAbout?.sobreMi}}" name="sobreMi"
-                class="form-control text-center fs-4" id="titulo" aria-labelledby="emailHelp" placeholder="ecribe algo sobre vos..." />
+              <label for="sobreMi" style="font-weight: bold" class="h3"
+                ><b>Describite Aquì</b></label
+              >
+              <br />
+              <input
+                type="text"
+                style="font-weight: bold"
+                ngModel="{{ editAbout?.sobreMi }}"
+                name="sobreMi"
+                class="form-control text-center fs-4"
+                id="sobreMi"
+                aria-labelledby="emailHelp"
+                placeholder="ecribe algo sobre vos..."
+              />
             </div>
-            <br>
+            <br />
 
             <div class="modal-footer">
-              <button type="button" id="" class="btn btn-secondary fs-3" data-dismiss="modal">
+              <button
+                type="button"
+                id=""
+                class="btn btn-secondary fs-3"
+                data-dismiss="modal"
+              >
                 Close
               </button>
 
-              <button (click)="onUpdateAbout(editForm.value)" data-dismiss="modal" class="btn btn-success fs-3">
+              <button
+                (click)="onUpdateAbout(editForm.value)"
+                data-dismiss="modal"
+                class="btn btn-success fs-3"
+              >
                 Save
               </button>
             </div>
@@ -61,49 +97,43 @@
 
   <!--Delete Modal-->
 
-  <!--<div
-data-bs-toggle="modal" data-bs-target="#deleteModalLabel"
-class="modal fade"
-id="deleteUsuariosModal"
-tabindex="-1"
-role="dialog"
-aria-labelledby="deleteModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog text-center" role="document">
-<div class="modal-content">
-  <div class="modal-header text-center alAbrir">
-    <h3 class="modal-title text-dark" id="deleteModalLabel"><b>Borrar Educaciòn</b> </h3>
+  <div
+    data-bs-toggle="modal"
+    data-bs-target="#deleteModalLabel"
+    class="modal fade"
+    id="deleteUsuariosModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="deleteModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog text-center" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center alAbrir">
+          <h3 class="modal-title text-dark" id="deleteModalLabel">
+            <b>Borrar Educaciòn</b>
+          </h3>
+        </div>
+
+        <div class="moda-body mt-5">
+          <p class="h4">
+            <b>Estas seguro de borrar?</b>
+            {{deleteAbout?.sobreMi}
+          </p>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg mx-4 fs-3"
+              data-dismiss="modal"
+            >
+              No
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="moda-body mt-5">
-    <p class="h4">
-      <b>Estas seguro de borrar?</b> 
-      {{deleteUsuarios?.titulo}}
-    </p>
-    <div class="modal-footer">
-      <button
-      type="button"
-      class="btn btn-secondary btn-lg mx-4 fs-3"
-      data-dismiss="modal"
-      >
-         No
-      </button>
-      <button
-      (click)="onDeleteAbout(onDeleteAbout!, id)"
-       class="btn btn-danger btn-lg fs-3"
-       data-dismiss="modal"
-      >Yes
-    </button>
-
-
 </div>
-</div>
-</div>
-</div>-->
-</div>
-
 <footer class="bg-white p-2 mt-5">
-
   <p class="text-center m-0 p-0 text-muted h4">Gatorolo</p>
 </footer>

@@ -7,6 +7,8 @@ import { StudiesService } from 'src/app/servicios/studies.service';
 import { TokenService } from 'src/app/servicios/token.service';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
+import {faTrash } from '@fortawesome/free-solid-svg-icons';
+import {faPen } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -29,6 +31,7 @@ import { Router } from '@angular/router';
   public editEducation:Studies | undefined;
   public deleteStudy:Studies | undefined;
 
+
   islogged = false;
   isloggingFail = false;
   loginUsuario!: LoginUsuario;
@@ -36,6 +39,8 @@ import { Router } from '@angular/router';
   password!: string;
   roles: string[] = [];
   errMsj!: string;
+  faPen = faPen;
+  faTrash = faTrash
   
 
     constructor(private studiesService: StudiesService, private tokenService: TokenService, private authService: AuthService, private router: Router) { }

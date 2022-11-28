@@ -7,6 +7,8 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { TokenService } from 'src/app/servicios/token.service';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
+import {faTrash } from '@fortawesome/free-solid-svg-icons';
+import {faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-projects',
@@ -27,6 +29,9 @@ export class ProjectsComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errMsj!: string;
+  faTrash = faTrash;
+  faPen = faPen
+
 
     constructor(private experienciaService: ExperienciaService, private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
