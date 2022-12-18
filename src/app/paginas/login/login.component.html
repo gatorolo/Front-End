@@ -1,34 +1,26 @@
 <div class="container">
   <section class="vh-60" style="background-color: transparent">
-    <div class="py-3 ">
-      <div class="row d-flex justify-content-center align-items-center h-80">
-        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card shadow-2-strong" style="border-radius: 1rem;">
-            <div class="card-body p-3 text-center">
+    <div class="py-4 ">
+      <div class="row d-flex justify-content-center align-items-center h-60">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
+          <div class="card shadow-1-strong" style="border-radius: 1rem;">
+            <div class="card-body pb-5 text-center">
 
               <h3 class="mb-5">Ingreso</h3>
               <span> usuario: 'user' pass: 'user'</span>
-              <hr>
+               <hr>
               <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
 
-                <div class="form mb-2">
+                <div class="form mb-1">
                   <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg border border-primary" [(ngModel)]="nombreUsuario" [ngModelOptions]="{standalone: true}"required />
                   <label class="form-label" for="nombreUsuario">Usuario</label>
                 </div>
 
-                <div class="form mb-4">
+                <div class="form mb-1">
                   <input type="password" id="password"
                     class="form-control form-control-lg border border-primary" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required />
                   <label class="form-label" for="password">Contraseña</label>
                 </div>
-
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-start ml-4">
-                  <input class="form-check-input ml-4" type="checkbox" value="" id="form1Example3" />
-                  <label class="form-check-label px-5" for="form1Example3"> Recordar </label>
-                </div>
-                
-                <hr class="my-5">
               
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
 
@@ -47,6 +39,6 @@
   </section>
 </div>
 
-<footer class="bg-white p-2 mt-5">
+<footer class="bg-white p-0 mt-5">
   <p class="text-center m-0 text-muted h4">Gatorolo</p>
 </footer>

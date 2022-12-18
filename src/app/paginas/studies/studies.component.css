@@ -14,8 +14,7 @@ body {
   overflow-x: hidden;
   background-image: url(../../../assets/EntityFramework-600x300.jpg);
   background-repeat: no-repeat;
-  background-size: cover ;
-  background-position: center;
+  background-size: cover; 
 }
 
 .container-item {
@@ -29,37 +28,28 @@ body {
  }
 
  h1 {
-   font-size: 1.7rem;
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+   font-size: 1.8rem;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
    background-color: rgba(0, 0, 0, 0.6);
    color: #fff;
    text-shadow: 0 0 10px #fff,
     0 0 20px #fff,
     0 0 50px #fff;
-    margin: 0.5rem;
+    margin: 2rem 0.5rem 0.2rem;
  }
-
-  span {
-   font-size: 1.5rem;
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
-   background-color: rgba(0, 0, 0, 0.6);
-   color: #fff;
-   text-shadow: 0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 50px #fff;
-    margin: 0.5rem 1rem;
- }
-
  
+ b {
+  font-size: 1.8rem;
+ }
+
  img {
-   display: block;
+   display: flex;
    width: 100%;
-   margin: 0 4% 12%;
-   padding-top: 0rem;
+   margin: 0 4%;
   }
   
   img:hover {
-   transform: scale(1.4);
+   transform: scale(1.29);
    transition: all .7s ease;
  }
 
@@ -69,7 +59,7 @@ body {
 
 .btn-danger ,.btn-warning {
   position: relative;
-  margin-top: -70px;
+  margin-top: 5px;
 }
 
 

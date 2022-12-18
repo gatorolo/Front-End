@@ -48,3 +48,29 @@ body {
  span {
    font-size: 1.5rem;
  }
+
+ @media screen and (min-width: 990px){
+   .container {
+      top: 1.7rem;
+      height: 75vh;
+    }
+  .card-body {
+      width: 40%;
+      height: 350px;
+      margin: 0 auto ;
+   }
+  h3 {
+   display: none;
+  }
+  span {
+   font-size: 1.2rem;
+  }
+  .form-check > input {
+   width: 1rem;
+   height: 1rem;
+  }
+  .btn-block {
+   font-size: 1.3rem;
+   
+  }
+ }

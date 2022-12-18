@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 import {Router} from '@angular/router';
 import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +17,9 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 import {faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import {faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import {LoginUsuario } from './models/login-usuario';
+import { Social } from './models/social';
 import {AuthService } from './servicios/auth.service';
+import { SocialService } from './servicios/social.service';
 import {TokenService } from './servicios/token.service';
 
 
@@ -29,6 +33,11 @@ import {TokenService } from './servicios/token.service';
 
 
 export class AppComponent {
+
+  public socials: Social[]=[];
+  public social= this.socialService.getSocial();
+  public editSocial : Social | undefined;
+  public deleteSocial: Social | undefined;
    
   faFacebookF = faFacebookF;
   faInstagram = faInstagram;
@@ -44,10 +53,8 @@ export class AppComponent {
   faPen = faPen;
   faUser = faUser;
   faArrowRightToBracket = faArrowRightToBracket;
-  faUserSlash = faUserSlash
-
+  faUserSlash = faUserSlash;
   isLogged = false;
-  isloggingFail = true;
   loginUsuario!: LoginUsuario;
   nombreUsuario!: string;
   password!: string;
@@ -55,9 +62,11 @@ export class AppComponent {
   errMsj!: string;
   
 
-  constructor(private router:Router, private tokenService: TokenService, private authService: AuthService){}
+  constructor(private socialService: SocialService, private router:Router, private tokenService: TokenService, private authService: AuthService){}
+ 
 
   ngOninit():void{
+    this.getSocial();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else {
@@ -65,9 +74,6 @@ export class AppComponent {
     }
   }
 
-  public irA():void {
-    alert("Para editar debes loguearte")
-  }
 
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
@@ -79,10 +85,9 @@ export class AppComponent {
         this.roles = data.authorities;
         this.router.navigate(['']);
         this.isLogged = true;
-        this.isloggingFail = false;
+       
       }, error =>{
         this.isLogged= false;
-        this.isloggingFail = true;
         this.errMsj = error.error.mensaje;
       
       })
@@ -97,4 +102,80 @@ export class AppComponent {
     this.router.navigate(['/paginas/login']);
     this.isLogged = true;
   }
+
+  public getSocial():void{
+    this.socialService.getSocial().subscribe({
+      next:(Response: Social[])=>{
+        this.socials=Response;
+      },
+      error:(error: HttpErrorResponse) =>{
+        alert(error.message);
+     }
+    })
+  }
+   //modal
+  public onOpenModal(mode: string, social?: Social): void {
+    const container = document.getElementById('main-container');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if (mode === 'add') {
+      button.setAttribute('data-target', '#addSocialModal');
+    } else if (mode === 'delete') {
+      this.deleteSocial = social;
+      button.setAttribute('data-target', '#deleteSocialModal');
+    } else if (mode === 'edit') {
+      this.editSocial = social;
+      button.setAttribute('data-target', '#editSocialModal');
+    }
+
+    container?.appendChild(button);
+    button.click();
+  }
+
+public onAddSocial(addForm: NgForm): void {
+  document.getElementById('add-social-form')?.click();
+  this.socialService.addSocial(addForm.value).subscribe({
+    next: (response: Social) => {
+      console.log(response);
+      this.getSocial();
+      addForm.reset();
+    },
+    error: (error: HttpErrorResponse) => {
+      alert(error.message);
+      addForm.reset();
+    },
+  });
+}
+
+public onUpdateSocial(social: Social){
+  this.editSocial=social;
+  document.getElementById('add-social-form')?.click();
+  this.socialService.updateSocial(social).subscribe({
+    next: (Response:Social) =>{
+      console.log(Response);
+      this.getSocial();
+      
+    },
+    error:(error:HttpErrorResponse)=>{
+      alert(error.message);
+    }
+
+  })
+}
+
+public onDeleteSocial(idSoc:number):void{
+this.socialService.deleteSocial(idSoc).subscribe({
+    next: (response:void) =>{
+      console.log(Response);
+      this.getSocial();
+      
+    },
+    error:(error:HttpErrorResponse)=>{
+      alert(error.message);
+    }
+
+  })
+}
 }

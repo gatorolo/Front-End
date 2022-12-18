@@ -11,7 +11,7 @@ body {
 
 .row {
     flex-shrink: 0;
-    width: 100%;
+    width: 100vw;
     max-width: 99%;
     padding: 0;
     margin-top: var(--bs-gutter-y);
@@ -53,9 +53,8 @@ header {
   position: absolute;
   display: flex;
   top: 20px;
-  right: -35%;
+  margin: 0 50%;
   transform: translate(-50%, -50%);
-  margin: 0;
   padding: 0;
 }
 
@@ -111,13 +110,13 @@ ul li a {
 .social li {
   top: 10%;
   position: relative;
-  padding:  16%;
+  padding:  10%;
   right: 0;
 }
 
 .social li a {
   box-shadow: 0 10px 5px rgba(255, 255, 255, 0.3);
-  padding: 0 4px;
+  padding: 0 1px;
 }
 
 
@@ -155,7 +154,7 @@ ul li a {
   position: absolute;
   padding: 1px 1px;
   bottom: .7em;
-  left: 50%;
+  left: 45%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
   opacity: 0;
@@ -184,8 +183,8 @@ ul li a  fa-icon {
   width: 100%;
   height: 100%;
   display: block;
-  margin: 0px;
-  padding: 0 5px;
+  margin: 0;
+  padding: 0;
   background: linear-gradient(0deg , #fff, #ddd);
   border-radius: 50%;
   line-height: calc(60px - 12px);
@@ -231,7 +230,7 @@ ul li:nth-child(6) a:hover fa-icon {
 }
 
 .social > li {
-  animation: movimiento 60s linear infinite;
+  animation: movimiento 40s linear infinite;
 }
 
 @keyframes movimiento {
@@ -246,6 +245,120 @@ ul li:nth-child(6) a:hover fa-icon {
   }
 }
 
+@media screen and (min-width: 390px) {
+  .social {
+    top: 14.3%;
+  }
+}
+@media screen and (min-width: 412px) {
+  .social {
+    top: 13.2%;
+  }
+}
 
+@media screen and (min-width: 418px) {
+  .navbar ul {
+    margin: 0 50%;
+  }
+}
 
+@media screen and (min-width: 475px) {
+  .navbar ul {
+    margin: 0 50%;
+    margin-right: 2rem;
+  }
+  .logo {
+    width: 65%;
+  }
+  .social {
+    top: 12.7%;
+  }
+  .social li {
+    right: -17%;
+  }
+}
 
+@media screen and (min-width: 576px) {
+  .logo {
+    width: 60%;
+  }
+  #check:checked + .social {
+    right: 3.9%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .social {
+    top: 12.7%;
+    width: 30%;
+  }
+  #check:checked + .social {
+    right: 6%;
+  }
+  .social li {
+    top: 10%;
+    position: relative;
+    padding:  16%;
+    right: -5%;
+  }
+}
+
+@media screen and (min-width: 635px) {
+  .social {
+    top: 12.7%;
+    width: 30%;
+  }
+  #check:checked + .social {
+    right: 9%;
+  }
+}
+
+@media screen and (min-width: 694px) {
+  #check:checked + .social {
+    right: 12%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #check:checked + .social {
+    right: 14%;
+  }
+  
+  .logo {
+    width: 50%;
+  }
+  .logo span {
+    display: none;
+  }
+  
+  @media screen and (min-width: 990px){
+    header {
+      height: 4.2em;
+    }
+    .checkbtn {
+      display: none;
+    }
+    .social {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      width: 12%;
+    }
+
+    .social li {
+      padding: 2% 0;
+    }
+
+    .social > li {
+      animation: movimiento 40s linear infinite;
+    }
+    ul li a {
+      bottom: 50px;
+    }
+
+    [data-title]:after {
+      bottom: 1.2em;
+    }
+  }
+}

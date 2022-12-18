@@ -49,13 +49,13 @@ h1 {
 }
 
 
-/*h1:hover span {
+h1:hover span {
   color: #fff;
   text-shadow: 0 0 10px #fff,
    0 0 40px #fff,
    0 0 100px #fff;
    cursor: context-menu;
-}*/
+}
 
 h3, h4 {
   font-size: 28px;
@@ -97,25 +97,103 @@ h3:hover {
 
 .inti {
   position: relative;
-  height: 100%;
-  max-width: 100%;
-  top: -30px;
-  margin: 1rem -0.2rem;
+  height: 50%;
+  max-width: 80%;
+  margin: 0 12%;
 }
 
 .mifoto {
-  animation: movimiento 180s linear infinite;
+  animation: movimiento 100s linear infinite;
 }
 
 @keyframes movimiento {
   0% {
-    transform: translateY(0);
+    transform: translateY(40px);
   }
   50% {
-    transform: translateY(-140px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(40px);
   }
 }
 
+@media screen and (min-width: 640px) {
+  .inti{
+    max-width: 80%;
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 747px) {
+  .inti{
+    margin: 30% 100% 0;
+  }
+  .perfil {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+}
+@media screen and (min-width: 974px) {
+  .perfil {
+    width: 60%;
+    margin: 5% auto 0;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h3, h4 {
+    font-size: 2.5rem;
+  }
+  .inti{
+    max-width: 100%;
+    margin: 0 100%;
+  }
+
+@media screen and (min-width: 990px) {
+ .perfil {
+  display: inline;
+  width: 40%;
+  margin: 10% 0;
+}
+h1 {
+  position: absolute;
+  top: 20%;
+  right: 8%;
+  font-size: 2.2rem;
+  width: 47%;
+}
+
+h3 {
+  font-size: 1.7rem;
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  right: 6%;
+}
+
+h4 {
+  font-size: 1.7rem;
+  width: 50%;
+  position: absolute;
+  top: 60%;
+  right: 6%;
+  
+}
+.inti{
+  position: absolute;
+  height: 50px;
+  max-width: 100%;
+  top: 84%;
+  right: -77%;
+}
+.container {
+  top: 1.7rem;
+  height: 74vh;
+}
+.btn-change {
+  top: 62%;
+  right: 60%;
+}
+}
+}
