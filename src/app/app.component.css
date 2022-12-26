@@ -98,7 +98,7 @@ ul li a {
   position: fixed;
   top: 14.3%;
   width: 45%;
-  height: 79.3vh;
+  height: 79.7vh;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -304,26 +304,19 @@ ul li:nth-child(6) a:hover fa-icon {
 }
 
 @media screen and (min-width: 635px) {
+  .checkbtn {
+    display: none;
+  }
   .social {
-    top: 12.7%;
-    width: 30%;
-  }
-  #check:checked + .social {
-    right: 9%;
-  }
-}
-
-@media screen and (min-width: 694px) {
-  #check:checked + .social {
-    right: 12%;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    background: none;
+    width: 12%;
   }
 }
 
 @media screen and (min-width: 760px) {
-  #check:checked + .social {
-    right: 14%;
-  }
-  
   .logo {
     width: 50%;
   }

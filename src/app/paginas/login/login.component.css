@@ -5,7 +5,7 @@ body {
  .container {
    position: relative;
     top: 2.8em;
-    height: 79vh;
+    height: 79.5vh;
     width: 95vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
@@ -14,8 +14,8 @@ body {
     overflow-x: hidden;
     background-image: url('../../../assets/login.jfif');
     background-position: center;
-    background-size: contain;
- }
+    background-size: cover;
+   }
 
  h3 {
     font-size: 2.2rem;
@@ -44,6 +44,9 @@ body {
    width: 2rem;
    height: 2rem;
  }
+ .row {
+   margin-top: 7%;
+ }
 
  span {
    font-size: 1.5rem;
@@ -71,6 +74,8 @@ body {
   }
   .btn-block {
    font-size: 1.3rem;
-   
+  }
+  .row {
+   margin-top: 10%;
   }
  }
