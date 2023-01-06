@@ -38,8 +38,8 @@ h2 {
   margin: 1.3rem -1%;
 }
  .btn-warning, .btn-danger, .btn-secondary, .btn-success {
-  margin-top: -2vh;
-  margin-left: 10px;
+  margin-top: -3vh;
+  margin-right: 20px;
  }
 
 @media screen and (min-width: 990px){

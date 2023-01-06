@@ -16,16 +16,6 @@ body {
     
  }
 
- /*.container-item {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  height: 10vh;
-  padding-top: 1px;
-  margin: 40px 0;
- }*/
-
  h1 {
    font-size: 1.6rem;
    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
@@ -52,7 +42,10 @@ body {
  b {
   font-size: 1.8rem;
  }
-
+ 
+ .main-container {
+  margin: 0 0 0 5%;
+ }
  
  img {
    display: block;
