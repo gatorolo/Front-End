@@ -235,10 +235,10 @@ ul li:nth-child(6) a:hover fa-icon {
 
 @keyframes movimiento {
   0% {
-    transform: translateY(0);
+    transform: translateY(-10px);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(15%);
   }
   100% {
     transform: translateY(0);

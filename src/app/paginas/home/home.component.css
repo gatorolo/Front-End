@@ -108,13 +108,13 @@ h3:hover {
 
 @keyframes movimiento {
   0% {
-    transform: translateY(40px);
+    transform: translateY(90px);
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
   100% {
-    transform: translateY(40px);
+    transform: translateY(90px);
   }
 }
 
@@ -154,7 +154,7 @@ h3:hover {
  .perfil {
   display: inline;
   width: 40%;
-  margin: 20% 0 0;
+  margin: 10% 0;
 }
 h1 {
   position: absolute;

@@ -11,6 +11,7 @@ import { StudiesComponent } from './paginas/studies/studies.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { AboutComponent } from './paginas/about/about.component';
 import { SkillsComponent } from './paginas/skills/skills.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 
@@ -23,7 +24,8 @@ import { SkillsComponent } from './paginas/skills/skills.component';
     StudiesComponent,
     HomeComponent,
     AboutComponent,
-    SkillsComponent
+    SkillsComponent,
+    
     
 
 
@@ -35,6 +37,7 @@ import { SkillsComponent } from './paginas/skills/skills.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   
   providers: [],
