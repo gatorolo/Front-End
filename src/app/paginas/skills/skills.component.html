@@ -1,30 +1,7 @@
 
-<!--<div class="container">
-   <div class="row">
-      <div class="item  col-sm-4 col-md-4 col-lg-4 col-xl-4">
-         <h2 class="title">HTML</h2>
-      <circle-progress
-      [percent]="85"
-      [radius]="100"
-      titleFontSize="4rem"
-      titleColor="#fff"
-      [showSubtitle]="false"
-      titleFontWeight="900"
-      [backgroundGradient]="true"
-      [outerStrokeWidth]="10"
-      [innerStrokeWidth]="5"
-      [outerStrokeColor]="'#33CC33'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="1200"
-    ></circle-progress>
-      </div>
-   </div>
-</div>-->
-
 <div class="container">
    <div class="main-container m-0">
-     <div class="text-center mt-4">
+     <div class="text-center mt-5">
        <button
          type="button"
          class="btn btn-success display-2 text-center"
@@ -41,7 +18,7 @@
        <div *ngFor="let skills of skillss">
          <div class="row item text-center">
           
-            <h2 class="title">{{skills.nombreSkill}}</h2>
+            <h1 class="title">{{skills.nombreSkill}}</h1>
 
             <circle-progress
             [percent]="(skills.porcentajeSkill)"
@@ -112,14 +89,14 @@
          <div class="modal-content">
            <div class="modal-header alAbrir">
              <h2 class="modal-title text-dark" id="addSkillsModalLabel">
-               <b>Sumà tu Skills</b>
+               <b>Sumà tu Skill</b>
              </h2>
            </div>
  
            <div class="modal-body">
              <form #addForm="ngForm" (ngSubmit)="onAddSkills(addForm)">
                <div class="form-group text-center">
-                 <label for="nombreSkill" class="h3"><b>Sumà un Tìtulo</b> </label>
+                 <label for="nombreSkill" class="h3"><b>Tu Habilidad</b></label>
                  <input
                    type="text"
                    style="font-weight: bold"
@@ -133,8 +110,8 @@
                </div>
  
                <div class="form-group text-center">
-                 <label for="porcentajeSkill" class="h3"
-                   ><b>Porcentaje de tu Skill</b></label
+                 <label for="porcentajeSkill" class="h2"
+                   ><b>Tiempo aprendiendo tu habilidad</b></label
                  >
                  <input
                    type="text"
@@ -143,7 +120,7 @@
                    name="porcentajeSkill"
                    class="form-control text-center fs-3"
                    id="porcentajeSkill"
-                   placeholder="Porcentaje"
+                   placeholder="Meses"
                    required
                  />
                </div>
@@ -152,7 +129,7 @@
                  <button
                    type="button"
                    id="add-skills-form"
-                   class="btn btn-secondary fs-3"
+                   class="btn btn-secondary fs-3 mt-2"
                    data-dismiss="modal"
                  >
                    Close
@@ -160,7 +137,7 @@
                  <button
                    [disabled]="addForm.invalid"
                    type="submit"
-                   class="btn btn-success fs-3"
+                   class="btn btn-success fs-3 mt-2"
                  >
                    Save
                  </button>
@@ -185,7 +162,7 @@
          <div class="modal-content">
            <div class="modal-header  text-center">
              <h3 class="modal-title text-dark" id="updateSkillsModalLabel">
-               <b>Edità el Nombre:</b> {{ editSkills?.nombreSkill }}
+               <b>Edità tu Habilidad:</b> {{ editSkills?.nombreSkill }}
              </h3>
            </div>
  
@@ -193,7 +170,7 @@
              <form #editForm="ngForm">
               <div class="form-group text-center">
                 <label for="name" style="font-weight: bold" class="h3"
-                  ><b>Tu habilidad Aquì</b></label
+                  ><b>Tu habilidad aquì</b></label
                 >
                 <input
                   type="text"
@@ -236,7 +213,7 @@
                  <button
                    type="button"
                    id=""
-                   class="btn btn-secondary fs-3"
+                   class="btn btn-secondary fs-3 mt-2"
                    data-dismiss="modal"
                  >
                    Close
@@ -245,7 +222,7 @@
                  <button
                    (click)="onUpdateSkills(editForm.value)"
                    data-dismiss="modal"
-                   class="btn btn-success fs-3"
+                   class="btn btn-success fs-3 mt-2"
                  >
                    Save
                  </button>
@@ -284,14 +261,14 @@
              <div class="modal-footer">
                <button
                  type="button"
-                 class="btn btn-secondary btn-lg mx-4 fs-3"
+                 class="btn btn-secondary btn-lg m-4 fs-3"
                  data-dismiss="modal"
                >
                  No
                </button>
                <button
                  (click)="onDeleteSkills(deleteSkills!.idSkill)"
-                 class="btn btn-danger btn-lg fs-3"
+                 class="btn btn-danger btn-lg fs-3 m-4"
                  data-dismiss="modal"
                >
                  Yes

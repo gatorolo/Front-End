@@ -15,6 +15,16 @@ body {
   background-size: cover;
 }
 
+h1 {
+  font-size: 1.8rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+   0 0 20px #fff,
+   0 0 50px #fff;
+   margin: 2rem 0.5rem 0.2rem;
+}
 .row {
   margin-top: 100px;
   display: flex;
@@ -23,23 +33,17 @@ body {
   margin: 50px 18%;
 }
 
+b {
+  font-size: 1.8rem;
+ }
 .modal {
   z-index: 99999;
 }
 
-h2 {
-  font-size: 1.8rem;
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
-   background-color: rgba(0, 0, 0, 0.6);
-   color: #fff;
-   text-shadow: 0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 50px #fff;
-  margin: 1.3rem -1%;
-}
+
  .btn-warning, .btn-danger, .btn-secondary, .btn-success {
   margin-top: -3vh;
-  margin-right: 20px;
+  margin-right: 5px;
  }
 
 @media screen and (min-width: 990px){
@@ -57,4 +61,7 @@ h2 {
     height: 75vh;
   }
 
+  .btn-warning, .btn-danger, .btn-secondary, .btn-success {
+    margin-right: 20px;
+  }
 }
