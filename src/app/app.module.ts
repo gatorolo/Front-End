@@ -12,6 +12,7 @@ import { HomeComponent } from './paginas/home/home.component';
 import { AboutComponent } from './paginas/about/about.component';
 import { SkillsComponent } from './paginas/skills/skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SocialComponent } from './paginas/social/social.component';
 
 
 
@@ -25,6 +26,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HomeComponent,
     AboutComponent,
     SkillsComponent,
+    SocialComponent
     
     
 

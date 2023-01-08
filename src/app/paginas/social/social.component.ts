@@ -1,40 +1,25 @@
-import {Component, OnInit} from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faHome, faTrash} from '@fortawesome/free-solid-svg-icons';
-import {faAddressCard} from '@fortawesome/free-solid-svg-icons';
-import {faGears} from '@fortawesome/free-solid-svg-icons';
-import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
-import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
-import {faAt} from '@fortawesome/free-solid-svg-icons';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {faPen} from '@fortawesome/free-solid-svg-icons';
-import {faUser} from '@fortawesome/free-solid-svg-icons';
-import {faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
-import {faUserSlash } from '@fortawesome/free-solid-svg-icons';
-import {LoginUsuario } from './models/login-usuario';
-import { Social } from './models/social';
-import {AuthService } from './servicios/auth.service';
-import {SocialService } from './servicios/social.service';
-import {TokenService } from './servicios/token.service';
-
-
-
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { LoginUsuario } from 'src/app/models/login-usuario';
+import { Social } from 'src/app/models/social';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { SocialService } from 'src/app/servicios/social.service';
+import { TokenService } from 'src/app/servicios/token.service';
+import {faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-social',
+  templateUrl: './social.component.html',
+  styleUrls: ['./social.component.css']
 })
-
-
-export class AppComponent {
-
-
+export class SocialComponent implements OnInit {
+  
   public socials: Social[]=[];
   public social= this.socialService.getSocial();
   public editSocial : Social | undefined;
@@ -44,17 +29,7 @@ export class AppComponent {
   faInstagram = faInstagram;
   faLinkedinIn = faLinkedinIn;
   faGithub = faGithub;
-  faHome = faHome;
-  faGears = faGears;
-  faAddressCard = faAddressCard;
-  faBuildingColumns = faBuildingColumns;
-  faDiagramProject = faDiagramProject;
-  faAt = faAt;
-  faBars = faBars;
   faPen = faPen;
-  faUser = faUser;
-  faArrowRightToBracket = faArrowRightToBracket;
-  faUserSlash = faUserSlash;
 
   isLogged = false;
   loginUsuario!: LoginUsuario;
@@ -64,11 +39,9 @@ export class AppComponent {
   errMsj!: string;
   faTrash = faTrash
 
+  constructor( private socialService: SocialService, private router:Router, private tokenService: TokenService, private authService: AuthService) { }
 
-  constructor(private socialService: SocialService, private router:Router, private tokenService: TokenService, private authService: AuthService){}
- 
-
-  ngOninit():void{
+  ngOnInit(): void {
     this.getSocial();
     if(this.tokenService.getToken()){
       this.isLogged = true;
@@ -76,7 +49,6 @@ export class AppComponent {
       this.isLogged = false;
     }
   }
-
 
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
@@ -118,7 +90,7 @@ export class AppComponent {
   }
    //modal
   public onOpenModal(mode: string, social?: Social): void {
-    const container = document.getElementById('container');
+    const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
     button.style.display = 'none';
@@ -181,4 +153,5 @@ this.socialService.deleteSocial(idSoc).subscribe({
 
   })
 }
+
 }

@@ -48,6 +48,10 @@ body {
     margin: 10% 2%;
     padding: 5%;
   }
+
+  .container {
+    height: 74.5vh;
+  }
 }
 
 

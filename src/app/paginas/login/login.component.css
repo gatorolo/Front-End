@@ -9,10 +9,11 @@ body {
     width: 95vw;
     align-items: center;
     box-shadow: 5px 20px 15px  rgba(0, 0, 0, 0.4);
-    transition: .5s;
+    background: linear-gradient(10deg, #ececec, #fff);
+    transition: 1s;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-image: url('../../../assets/login.jfif');
+    background-image: url('../../../assets/login.jpg');
     background-position: center;
     background-size: cover;
    }
@@ -78,4 +79,9 @@ body {
   .row {
    margin-top: 1%;
   }
+  .container {
+    top: 1.7rem;
+    height: 74.5vh;
+  }
+  
  }

@@ -6,6 +6,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { StudiesComponent } from './studies/studies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
+import { SocialComponent } from './social/social.component';
+
 
 const routes: Routes = [
   {
@@ -17,7 +19,8 @@ const routes: Routes = [
       {path: 'studies', component: StudiesComponent},
       {path: 'projects', component: ProjectsComponent},
       {path: 'login', component: LoginComponent},
-
+      {path: 'social', component: SocialComponent},
+      
       {path: '**', redirectTo: 'home'}
 
       

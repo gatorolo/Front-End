@@ -7,7 +7,7 @@ import { LoginUsuario } from 'src/app/models/login-usuario';
 import { TokenService } from 'src/app/servicios/token.service';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
-import {faPen } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -20,10 +20,12 @@ import {faPen } from '@fortawesome/free-solid-svg-icons';
 
 
 export class HomeComponent implements OnInit {
+
     public usuario: Usuarios | undefined;
     public editUsuarios : Usuarios | undefined;
     public deleteUsuarios: Usuarios | undefined;
     public usuarios= this.homeService.getUsuarios();
+    
   faPen = faPen;
   islogged = false;
   isloggingFail = false;

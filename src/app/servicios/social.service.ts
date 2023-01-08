@@ -23,7 +23,7 @@ public updateSocial(social: Social):Observable<Social>{
   return this.http.put<Social>(`${this.apiServerUrl}/social/update`, social);
 }
 
-public deleteSocial(socialId: number):Observable<void>{
-  return this.http.delete<void>(`${this.apiServerUrl}/social/delete/${socialId}`);
+public deleteSocial(idSoc: number):Observable<void>{
+  return this.http.delete<void>(`${this.apiServerUrl}/social/delete/${idSoc}`);
 }
 }
