@@ -116,6 +116,7 @@ ul li a {
 .social li {
   position: absolute;
   left: 5%;
+  display: flex;
 }
 
 ul li a  fa-icon {
@@ -177,7 +178,7 @@ ul li:nth-child(6) a:hover fa-icon {
     transform: translateY(40vh);
   }
   50% {
-    transform: translateY(15vh);
+    transform: translateY(20vh);
   }
   100% {
     transform: translateY(40vh);
@@ -222,25 +223,11 @@ ul li:nth-child(6) a:hover fa-icon {
     }
 
     .social li {
-      position: relative;
-      left: -4%;
+      position: absolute;
+      left: 3%;
     }
 
-    .social > li {
-      animation: movimiento 80s linear infinite;
-    }
-    
-    @keyframes movimiento {
-      0% {
-        transform: translateY(30vh);
-      }
-      50% {
-        transform: translateY(20vh);
-      }
-      100% {
-        transform: translateY(30vh);
-      }
-    }
+   
     ul li a {
       bottom: 50px;
     }

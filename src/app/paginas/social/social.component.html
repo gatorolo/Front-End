@@ -22,16 +22,16 @@
             
               <div class="row item text-center" *ngFor="let social of socials">
                 <div class="row mt-5">
-                  <ul>
+                  <ul class="social">
                    <li> <a href={{social.faceSocial}} target="_blank">
                         <fa-icon [icon]="faFacebookF" aria-hidden="true"></fa-icon>
                       </a></li>
                       <li><a href={{social.instaSocial}} target="_blank">
                         <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
                       </a></li>
-                     <li><a href={{social.gitSocial}} target="_blank">
-                        <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
-                      </a></li> 
+                      <li><a href={{social.gitSocial}} target="_blank">
+                         <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
+                       </a></li> 
                       <li><a href={{social.linkSocial}} target="_blank">
                         <fa-icon [icon]="faLinkedinIn" aria-hidden="true"></fa-icon>
                       </a></li>

@@ -224,13 +224,13 @@ h4 {
 
 @keyframes movimiento {
   0% {
-    transform: translateY(40vh);
+    transform: translateY(50vh);
   }
   50% {
-    transform: translateY(15vh);
+    transform: translateY(20vh);
   }
   100% {
-    transform: translateY(40vh);
+    transform: translateY(50vh);
   }
 }
 }

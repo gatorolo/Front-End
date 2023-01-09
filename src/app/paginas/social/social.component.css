@@ -12,6 +12,7 @@
     background: linear-gradient(10deg, #ececec, #fff);
     transition: 1s;
     overflow-x: hidden;
+    overflow-y: hidden;
     background-image: url(../../../assets/redes.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
@@ -22,7 +23,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 50%;
+    top: 40%;
     margin: 0 93%;
     transform: translate(-50%, -50%);
     padding: 0;
@@ -123,6 +124,7 @@ ul li a {
     z-index: 99999;
   }
 
+
 @media screen and (min-width: 990px) {
     .container {
         top: 1.7rem;
@@ -132,7 +134,7 @@ ul li a {
       ul {
         display: flex;
         flex-direction: row;
-        margin: 10% 85%;
+        margin: 3.5% 85%;
        
       }
 
