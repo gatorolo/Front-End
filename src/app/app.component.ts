@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import {Router} from '@angular/router';
-import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faHome, faTrash} from '@fortawesome/free-solid-svg-icons';

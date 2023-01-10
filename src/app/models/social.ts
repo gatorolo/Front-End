@@ -4,5 +4,9 @@ export interface Social {
     instaSocial: string;
     gitSocial: string;
     linkSocial: string;
+    twitSocial: string;
+    whatsSocial: string;
+
+
 
 }

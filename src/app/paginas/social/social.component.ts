@@ -2,8 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
-import {faInstagram} from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { LoginUsuario } from 'src/app/models/login-usuario';
@@ -11,7 +11,8 @@ import { Social } from 'src/app/models/social';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { SocialService } from 'src/app/servicios/social.service';
 import { TokenService } from 'src/app/servicios/token.service';
-import {faPen } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-social',
@@ -30,6 +31,8 @@ export class SocialComponent implements OnInit {
   faLinkedinIn = faLinkedinIn;
   faGithub = faGithub;
   faPen = faPen;
+  faTwitter = faTwitter;
+  faWhatsapp = faWhatsapp;
 
   isLogged = false;
   loginUsuario!: LoginUsuario;

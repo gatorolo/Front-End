@@ -25,12 +25,9 @@ h1 {
    0 0 50px #fff;
    margin: 2rem 0.5rem 0.2rem;
 }
-.row {
-  margin-top: 100px;
-  display: flex;
-}
+
 .item {
-  margin: 50px 18%;
+  margin: 20px 18%;
 }
 
 b {

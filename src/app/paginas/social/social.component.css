@@ -23,7 +23,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 40%;
+    top: 43%;
     margin: 0 93%;
     transform: translate(-50%, -50%);
     padding: 0;
@@ -32,7 +32,7 @@
   
   ul li {
     list-style: none;
-    padding: 25px 2px;
+    padding: 20px 2px;
   }
 
 ul li a {
@@ -46,14 +46,13 @@ ul li a {
     border-radius: 50%;
     border: solid .2px #fff;
     text-decoration: none;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 5px rgba(159, 185, 185, 0.1);
     background: linear-gradient(0deg, #ddd, rgb(248, 230, 230));
     transition: .9s;
-    bottom: 25px;
   }
 
   ul li a:hover {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 0px rgba(18, 22, 22, 0.1);
   }
   
   
@@ -63,9 +62,9 @@ ul li a {
     display: block;
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg , #fff, #ddd);
+    background: linear-gradient(10deg , #fff, #ddd);
     border-radius: 50%;
-    line-height: calc(60px - 12px);
+    line-height: 48px;
     font-size: 30px;
     color: #262626;
     transition:  .5s;
@@ -73,7 +72,7 @@ ul li a {
 
   .btn-change {
     position: absolute;
-    top: 85%;
+    top: 88%;
     right: 35%;
   }
   
@@ -134,7 +133,7 @@ ul li a {
       ul {
         display: flex;
         flex-direction: row;
-        margin: 3.5% 85%;
+        margin: 3.5% 78%;
        
       }
 
