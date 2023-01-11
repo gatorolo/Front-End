@@ -34,8 +34,10 @@
         </a>
         </li>
 
-        <li class="btn_menu">
-          <a routerLink='/paginas/social'><fa-icon [icon]="faBars" aria-hidden="true"></fa-icon></a>
+        <li data-title="Contact">
+          <a routerLink='/paginas/social'>
+            <fa-icon [icon]="faEnvelope" aria-hidden="true"></fa-icon>
+          </a>
         </li>
       </ul>
     </nav> 
@@ -51,14 +53,14 @@
           </a>
         </li>
       </ul>
-      
+     
    </header>
 
 
 
 <script>
   document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
-      document.cookie = 'same-site-cookie=foo; SameSite=Lax'; 
+  document.cookie = 'same-site-cookie=foo; SameSite=Lax'
 </script>
 
 

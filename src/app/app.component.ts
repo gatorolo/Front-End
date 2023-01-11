@@ -11,10 +11,9 @@ import {faGears} from '@fortawesome/free-solid-svg-icons';
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
 import {faDiagramProject} from '@fortawesome/free-solid-svg-icons';
 import {faAt} from '@fortawesome/free-solid-svg-icons';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {faPen} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faUser} from '@fortawesome/free-solid-svg-icons';
-import {faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import {faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import {LoginUsuario } from './models/login-usuario';
 import { Social } from './models/social';
@@ -50,10 +49,9 @@ export class AppComponent {
   faBuildingColumns = faBuildingColumns;
   faDiagramProject = faDiagramProject;
   faAt = faAt;
-  faBars = faBars;
+  faEnvelope = faEnvelope;
   faPen = faPen;
   faUser = faUser;
-  faArrowRightToBracket = faArrowRightToBracket;
   faUserSlash = faUserSlash;
 
   isLogged = false;
