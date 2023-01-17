@@ -230,6 +230,7 @@ ul li:nth-child(6) a:hover fa-icon {
    
     ul li a {
       bottom: 50px;
+      margin: 5px 13px 5px 8px;
     }
 
     [data-title]:after {

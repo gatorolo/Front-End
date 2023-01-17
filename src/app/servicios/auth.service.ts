@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../models/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://combative-roch-gatorolo.koyeb.app/auth/';
 
   constructor(private httpclient: HttpClient) { }
 

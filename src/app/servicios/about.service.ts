@@ -9,7 +9,7 @@ import { About } from '../models/about';
 })
 
 export class AboutService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl='https://combative-roch-gatorolo.koyeb.app'
 
   constructor(private http: HttpClient) {}
 

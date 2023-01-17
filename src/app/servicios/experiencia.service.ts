@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl='https://combative-roch-gatorolo.koyeb.app'
 
   constructor(private http: HttpClient) { }
 

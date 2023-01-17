@@ -8,7 +8,8 @@ import { Usuarios } from '../models/usuarios';
   providedIn: 'root'
 })
 export class HomeService {
-  private apiServerUrl=environment.apiBaseUrl;
+ 
+  private apiServerUrl='https://combative-roch-gatorolo.koyeb.app'
 
   constructor(private http: HttpClient) { }
 
